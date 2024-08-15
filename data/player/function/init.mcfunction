@@ -1,5 +1,5 @@
 #> player:init
 # プレイヤーが初めてワールドに入った時に実行されるコマンド
-
-# IDを付与
     
+# プレイヤーにIDとそのビットタグを付与する
+    function common:init/id/tag
