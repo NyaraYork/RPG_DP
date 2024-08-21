@@ -5,43 +5,43 @@
     execute store result score @s EntityID run function common:init/id/number
 
 # 取得したIDをビット化
-    scoreboard players operation #Bit1 Temp = @s EntityID
-    execute if score #Bit1 Temp matches ..-1 store success score #Bit32 Temp run scoreboard players operation #Bit1 Temp -= #-2147483648 Const
+    scoreboard players operation #Bit01 Temp = @s EntityID
+    execute store success score #Bit32 Temp if score #Bit01 Temp matches ..-1 run scoreboard players operation #Bit01 Temp -= #-2147483648 Const
 
-    scoreboard players operation #Bit2 Temp = #Bit1 Temp
-    scoreboard players operation #Bit1 Temp %= #2 Const
-    scoreboard players operation #Bit2 Temp /= #2 Const
+    scoreboard players operation #Bit02 Temp = #Bit01 Temp
+    scoreboard players operation #Bit01 Temp %= #2 Const
+    scoreboard players operation #Bit02 Temp /= #2 Const
 
-    scoreboard players operation #Bit3 Temp = #Bit2 Temp
-    scoreboard players operation #Bit2 Temp %= #2 Const
-    scoreboard players operation #Bit3 Temp /= #2 Const
+    scoreboard players operation #Bit03 Temp = #Bit02 Temp
+    scoreboard players operation #Bit02 Temp %= #2 Const
+    scoreboard players operation #Bit03 Temp /= #2 Const
 
-    scoreboard players operation #Bit4 Temp = #Bit3 Temp
-    scoreboard players operation #Bit3 Temp %= #2 Const
-    scoreboard players operation #Bit4 Temp /= #2 Const
+    scoreboard players operation #Bit04 Temp = #Bit03 Temp
+    scoreboard players operation #Bit03 Temp %= #2 Const
+    scoreboard players operation #Bit04 Temp /= #2 Const
 
-    scoreboard players operation #Bit5 Temp = #Bit4 Temp
-    scoreboard players operation #Bit4 Temp %= #2 Const
-    scoreboard players operation #Bit5 Temp /= #2 Const
+    scoreboard players operation #Bit05 Temp = #Bit04 Temp
+    scoreboard players operation #Bit04 Temp %= #2 Const
+    scoreboard players operation #Bit05 Temp /= #2 Const
 
-    scoreboard players operation #Bit6 Temp = #Bit5 Temp
-    scoreboard players operation #Bit5 Temp %= #2 Const
-    scoreboard players operation #Bit6 Temp /= #2 Const
+    scoreboard players operation #Bit06 Temp = #Bit05 Temp
+    scoreboard players operation #Bit05 Temp %= #2 Const
+    scoreboard players operation #Bit06 Temp /= #2 Const
 
-    scoreboard players operation #Bit7 Temp = #Bit6 Temp
-    scoreboard players operation #Bit6 Temp %= #2 Const
-    scoreboard players operation #Bit7 Temp /= #2 Const
+    scoreboard players operation #Bit07 Temp = #Bit06 Temp
+    scoreboard players operation #Bit06 Temp %= #2 Const
+    scoreboard players operation #Bit07 Temp /= #2 Const
 
-    scoreboard players operation #Bit8 Temp = #Bit7 Temp
-    scoreboard players operation #Bit7 Temp %= #2 Const
-    scoreboard players operation #Bit8 Temp /= #2 Const
+    scoreboard players operation #Bit08 Temp = #Bit07 Temp
+    scoreboard players operation #Bit07 Temp %= #2 Const
+    scoreboard players operation #Bit08 Temp /= #2 Const
 
-    scoreboard players operation #Bit9 Temp = #Bit8 Temp
-    scoreboard players operation #Bit8 Temp %= #2 Const
-    scoreboard players operation #Bit9 Temp /= #2 Const
+    scoreboard players operation #Bit09 Temp = #Bit08 Temp
+    scoreboard players operation #Bit08 Temp %= #2 Const
+    scoreboard players operation #Bit09 Temp /= #2 Const
 
-    scoreboard players operation #Bit10 Temp = #Bit9 Temp
-    scoreboard players operation #Bit9 Temp %= #2 Const
+    scoreboard players operation #Bit10 Temp = #Bit09 Temp
+    scoreboard players operation #Bit09 Temp %= #2 Const
     scoreboard players operation #Bit10 Temp /= #2 Const
 
     scoreboard players operation #Bit11 Temp = #Bit10 Temp
@@ -129,15 +129,15 @@
     scoreboard players operation #Bit31 Temp /= #2 Const
 
 # ビット化したIDをもとにタグ付与
-    execute if score #Bit1 Temp matches 1 run tag @s add Bit1
-    execute if score #Bit2 Temp matches 1 run tag @s add Bit2
-    execute if score #Bit3 Temp matches 1 run tag @s add Bit3
-    execute if score #Bit4 Temp matches 1 run tag @s add Bit4
-    execute if score #Bit5 Temp matches 1 run tag @s add Bit5
-    execute if score #Bit6 Temp matches 1 run tag @s add Bit6
-    execute if score #Bit7 Temp matches 1 run tag @s add Bit7
-    execute if score #Bit8 Temp matches 1 run tag @s add Bit8
-    execute if score #Bit9 Temp matches 1 run tag @s add Bit9
+    execute if score #Bit01 Temp matches 1 run tag @s add Bit01
+    execute if score #Bit02 Temp matches 1 run tag @s add Bit02
+    execute if score #Bit03 Temp matches 1 run tag @s add Bit03
+    execute if score #Bit04 Temp matches 1 run tag @s add Bit04
+    execute if score #Bit05 Temp matches 1 run tag @s add Bit05
+    execute if score #Bit06 Temp matches 1 run tag @s add Bit06
+    execute if score #Bit07 Temp matches 1 run tag @s add Bit07
+    execute if score #Bit08 Temp matches 1 run tag @s add Bit08
+    execute if score #Bit09 Temp matches 1 run tag @s add Bit09
     execute if score #Bit10 Temp matches 1 run tag @s add Bit10
     execute if score #Bit11 Temp matches 1 run tag @s add Bit11
     execute if score #Bit12 Temp matches 1 run tag @s add Bit12
@@ -163,15 +163,15 @@
     execute if score #Bit32 Temp matches 1 run tag @s add Bit32
 
 # スコアリセット
-    scoreboard players reset #Bit1 Temp
-    scoreboard players reset #Bit2 Temp
-    scoreboard players reset #Bit3 Temp
-    scoreboard players reset #Bit4 Temp
-    scoreboard players reset #Bit5 Temp
-    scoreboard players reset #Bit6 Temp
-    scoreboard players reset #Bit7 Temp
-    scoreboard players reset #Bit8 Temp
-    scoreboard players reset #Bit9 Temp
+    scoreboard players reset #Bit01 Temp
+    scoreboard players reset #Bit02 Temp
+    scoreboard players reset #Bit03 Temp
+    scoreboard players reset #Bit04 Temp
+    scoreboard players reset #Bit05 Temp
+    scoreboard players reset #Bit06 Temp
+    scoreboard players reset #Bit07 Temp
+    scoreboard players reset #Bit08 Temp
+    scoreboard players reset #Bit09 Temp
     scoreboard players reset #Bit10 Temp
     scoreboard players reset #Bit11 Temp
     scoreboard players reset #Bit12 Temp
