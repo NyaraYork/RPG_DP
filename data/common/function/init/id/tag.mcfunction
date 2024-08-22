@@ -1,134 +1,39 @@
 #> common:init/id/tag
-# エンティティにIDとそのビットタグを付与するコマンド
+# ビット化したIDをもとにタグを付与するコマンド
+    #declare tag Bit01
+    #declare tag Bit02
+    #declare tag Bit03
+    #declare tag Bit04
+    #declare tag Bit05
+    #declare tag Bit06
+    #declare tag Bit07
+    #declare tag Bit08
+    #declare tag Bit09
+    #declare tag Bit10
+    #declare tag Bit11
+    #declare tag Bit12
+    #declare tag Bit13
+    #declare tag Bit14
+    #declare tag Bit15
+    #declare tag Bit16
+    #declare tag Bit17
+    #declare tag Bit18
+    #declare tag Bit19
+    #declare tag Bit20
+    #declare tag Bit21
+    #declare tag Bit22
+    #declare tag Bit23
+    #declare tag Bit24
+    #declare tag Bit25
+    #declare tag Bit26
+    #declare tag Bit27
+    #declare tag Bit28
+    #declare tag Bit29
+    #declare tag Bit30
+    #declare tag Bit31
+    #declare tag Bit32
 
-# IDを取得
-    execute store result score @s EntityID run function common:init/id/number
-
-# 取得したIDをビット化
-    scoreboard players operation #Bit01 Temp = @s EntityID
-    execute store success score #Bit32 Temp if score #Bit01 Temp matches ..-1 run scoreboard players operation #Bit01 Temp -= #-2147483648 Const
-
-    scoreboard players operation #Bit02 Temp = #Bit01 Temp
-    scoreboard players operation #Bit01 Temp %= #2 Const
-    scoreboard players operation #Bit02 Temp /= #2 Const
-
-    scoreboard players operation #Bit03 Temp = #Bit02 Temp
-    scoreboard players operation #Bit02 Temp %= #2 Const
-    scoreboard players operation #Bit03 Temp /= #2 Const
-
-    scoreboard players operation #Bit04 Temp = #Bit03 Temp
-    scoreboard players operation #Bit03 Temp %= #2 Const
-    scoreboard players operation #Bit04 Temp /= #2 Const
-
-    scoreboard players operation #Bit05 Temp = #Bit04 Temp
-    scoreboard players operation #Bit04 Temp %= #2 Const
-    scoreboard players operation #Bit05 Temp /= #2 Const
-
-    scoreboard players operation #Bit06 Temp = #Bit05 Temp
-    scoreboard players operation #Bit05 Temp %= #2 Const
-    scoreboard players operation #Bit06 Temp /= #2 Const
-
-    scoreboard players operation #Bit07 Temp = #Bit06 Temp
-    scoreboard players operation #Bit06 Temp %= #2 Const
-    scoreboard players operation #Bit07 Temp /= #2 Const
-
-    scoreboard players operation #Bit08 Temp = #Bit07 Temp
-    scoreboard players operation #Bit07 Temp %= #2 Const
-    scoreboard players operation #Bit08 Temp /= #2 Const
-
-    scoreboard players operation #Bit09 Temp = #Bit08 Temp
-    scoreboard players operation #Bit08 Temp %= #2 Const
-    scoreboard players operation #Bit09 Temp /= #2 Const
-
-    scoreboard players operation #Bit10 Temp = #Bit09 Temp
-    scoreboard players operation #Bit09 Temp %= #2 Const
-    scoreboard players operation #Bit10 Temp /= #2 Const
-
-    scoreboard players operation #Bit11 Temp = #Bit10 Temp
-    scoreboard players operation #Bit10 Temp %= #2 Const
-    scoreboard players operation #Bit11 Temp /= #2 Const
-
-    scoreboard players operation #Bit12 Temp = #Bit11 Temp
-    scoreboard players operation #Bit11 Temp %= #2 Const
-    scoreboard players operation #Bit12 Temp /= #2 Const
-
-    scoreboard players operation #Bit13 Temp = #Bit12 Temp
-    scoreboard players operation #Bit12 Temp %= #2 Const
-    scoreboard players operation #Bit13 Temp /= #2 Const
-
-    scoreboard players operation #Bit14 Temp = #Bit13 Temp
-    scoreboard players operation #Bit13 Temp %= #2 Const
-    scoreboard players operation #Bit14 Temp /= #2 Const
-
-    scoreboard players operation #Bit15 Temp = #Bit14 Temp
-    scoreboard players operation #Bit14 Temp %= #2 Const
-    scoreboard players operation #Bit15 Temp /= #2 Const
-
-    scoreboard players operation #Bit16 Temp = #Bit15 Temp
-    scoreboard players operation #Bit15 Temp %= #2 Const
-    scoreboard players operation #Bit16 Temp /= #2 Const
-
-    scoreboard players operation #Bit17 Temp = #Bit16 Temp
-    scoreboard players operation #Bit16 Temp %= #2 Const
-    scoreboard players operation #Bit17 Temp /= #2 Const
-
-    scoreboard players operation #Bit18 Temp = #Bit17 Temp
-    scoreboard players operation #Bit17 Temp %= #2 Const
-    scoreboard players operation #Bit18 Temp /= #2 Const
-
-    scoreboard players operation #Bit19 Temp = #Bit18 Temp
-    scoreboard players operation #Bit18 Temp %= #2 Const
-    scoreboard players operation #Bit19 Temp /= #2 Const
-
-    scoreboard players operation #Bit20 Temp = #Bit19 Temp
-    scoreboard players operation #Bit19 Temp %= #2 Const
-    scoreboard players operation #Bit20 Temp /= #2 Const
-
-    scoreboard players operation #Bit21 Temp = #Bit20 Temp
-    scoreboard players operation #Bit20 Temp %= #2 Const
-    scoreboard players operation #Bit21 Temp /= #2 Const
-
-    scoreboard players operation #Bit22 Temp = #Bit21 Temp
-    scoreboard players operation #Bit21 Temp %= #2 Const
-    scoreboard players operation #Bit22 Temp /= #2 Const
-
-    scoreboard players operation #Bit23 Temp = #Bit22 Temp
-    scoreboard players operation #Bit22 Temp %= #2 Const
-    scoreboard players operation #Bit23 Temp /= #2 Const
-
-    scoreboard players operation #Bit24 Temp = #Bit23 Temp
-    scoreboard players operation #Bit23 Temp %= #2 Const
-    scoreboard players operation #Bit24 Temp /= #2 Const
-
-    scoreboard players operation #Bit25 Temp = #Bit24 Temp
-    scoreboard players operation #Bit24 Temp %= #2 Const
-    scoreboard players operation #Bit25 Temp /= #2 Const
-
-    scoreboard players operation #Bit26 Temp = #Bit25 Temp
-    scoreboard players operation #Bit25 Temp %= #2 Const
-    scoreboard players operation #Bit26 Temp /= #2 Const
-
-    scoreboard players operation #Bit27 Temp = #Bit26 Temp
-    scoreboard players operation #Bit26 Temp %= #2 Const
-    scoreboard players operation #Bit27 Temp /= #2 Const
-
-    scoreboard players operation #Bit28 Temp = #Bit27 Temp
-    scoreboard players operation #Bit27 Temp %= #2 Const
-    scoreboard players operation #Bit28 Temp /= #2 Const
-
-    scoreboard players operation #Bit29 Temp = #Bit28 Temp
-    scoreboard players operation #Bit28 Temp %= #2 Const
-    scoreboard players operation #Bit29 Temp /= #2 Const
-
-    scoreboard players operation #Bit30 Temp = #Bit29 Temp
-    scoreboard players operation #Bit29 Temp %= #2 Const
-    scoreboard players operation #Bit30 Temp /= #2 Const
-
-    scoreboard players operation #Bit31 Temp = #Bit30 Temp
-    scoreboard players operation #Bit30 Temp %= #2 Const
-    scoreboard players operation #Bit31 Temp /= #2 Const
-
-# ビット化したIDをもとにタグ付与
+# タグを付与
     execute if score #Bit01 Temp matches 1 run tag @s add Bit01
     execute if score #Bit02 Temp matches 1 run tag @s add Bit02
     execute if score #Bit03 Temp matches 1 run tag @s add Bit03
@@ -161,37 +66,3 @@
     execute if score #Bit30 Temp matches 1 run tag @s add Bit30
     execute if score #Bit31 Temp matches 1 run tag @s add Bit31
     execute if score #Bit32 Temp matches 1 run tag @s add Bit32
-
-# スコアリセット
-    scoreboard players reset #Bit01 Temp
-    scoreboard players reset #Bit02 Temp
-    scoreboard players reset #Bit03 Temp
-    scoreboard players reset #Bit04 Temp
-    scoreboard players reset #Bit05 Temp
-    scoreboard players reset #Bit06 Temp
-    scoreboard players reset #Bit07 Temp
-    scoreboard players reset #Bit08 Temp
-    scoreboard players reset #Bit09 Temp
-    scoreboard players reset #Bit10 Temp
-    scoreboard players reset #Bit11 Temp
-    scoreboard players reset #Bit12 Temp
-    scoreboard players reset #Bit13 Temp
-    scoreboard players reset #Bit14 Temp
-    scoreboard players reset #Bit15 Temp
-    scoreboard players reset #Bit16 Temp
-    scoreboard players reset #Bit17 Temp
-    scoreboard players reset #Bit18 Temp
-    scoreboard players reset #Bit19 Temp
-    scoreboard players reset #Bit20 Temp
-    scoreboard players reset #Bit21 Temp
-    scoreboard players reset #Bit22 Temp
-    scoreboard players reset #Bit23 Temp
-    scoreboard players reset #Bit24 Temp
-    scoreboard players reset #Bit25 Temp
-    scoreboard players reset #Bit26 Temp
-    scoreboard players reset #Bit27 Temp
-    scoreboard players reset #Bit28 Temp
-    scoreboard players reset #Bit29 Temp
-    scoreboard players reset #Bit30 Temp
-    scoreboard players reset #Bit31 Temp
-    scoreboard players reset #Bit32 Temp

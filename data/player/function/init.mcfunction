@@ -2,4 +2,4 @@
 # プレイヤーが初めてワールドに入った時に実行されるコマンド
     
 # プレイヤーにIDとそのビットタグを付与する
-    function common:init/id/tag
+    function common:init/id/bit
