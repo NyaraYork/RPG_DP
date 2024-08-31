@@ -1,10 +1,15 @@
-#> common:init/id/_remove
-# IDとそのビットタグを削除するコマンド(テスト用)
+#> common:init/id/_reset
+# スコアと付与したタグをリセットするコマンド(テスト用)
 
-# IDをリセット
+# スコアをリセット
     scoreboard players reset @s EntityID
+    scoreboard players reset @s Level
+    scoreboard players reset @s XP
+    scoreboard players reset @s XPRequired
 
-# ビットタグを削除
+# タグを削除
+    tag @s remove None
+
     tag @s remove Bit01
     tag @s remove Bit02
     tag @s remove Bit03
