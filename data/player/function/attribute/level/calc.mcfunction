@@ -4,7 +4,7 @@
 # レベルアップ
     scoreboard players add @s Level 1
 
-# 獲得した経験値を正しく反映する
+# 無限にレベルアップできないようにする
     scoreboard players operation @s XP -= @s XPRequired
 
 # 次のレベルに必要な経験値を計算
