@@ -1,5 +1,5 @@
-#> common:init/id/_reset
-# スコアと付与したタグをリセットするコマンド(テスト用)
+#> player:_reset
+# プレイヤーのデータをリセットするコマンド(テスト用)
 
 # スコアをリセット
     scoreboard players reset @s EntityID
@@ -7,9 +7,10 @@
     scoreboard players reset @s XP
     scoreboard players reset @s XPRequired
 
-# タグを削除
-    tag @s remove None
+# チームから脱退
+    team leave @s 
 
+# ビットタグを削除
     tag @s remove Bit01
     tag @s remove Bit02
     tag @s remove Bit03

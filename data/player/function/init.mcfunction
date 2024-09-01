@@ -6,5 +6,4 @@
 
 # プレイヤーにレベルとステータスを設定する
     function player:attribute/level/calc
-    tag @s add None
     function player:job/changed
