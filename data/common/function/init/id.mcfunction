@@ -1,4 +1,4 @@
-#> common:init/id/bit
+#> common:init/id
 # エンティティにIDとそのビットタグを付与するコマンド
     #declare score_holder #Bit01
     #declare score_holder #Bit02

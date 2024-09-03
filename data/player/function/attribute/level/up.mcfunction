@@ -5,7 +5,7 @@
     function player:attribute/level/calc
 
 # ステータスを更新
-    function player:job/changed
+    function player:attribute/update
 
 # レベルアップ時の演出
     tellraw @s [{"text":"レベルが","color":"green"},{"score":{"name":"@s","objective":"Level"},"color":"green"},{"text":"に上がった！","color":"green"}]
