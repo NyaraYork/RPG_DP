@@ -18,6 +18,8 @@
     scoreboard objectives add CritRate dummy
     scoreboard objectives add CritDamage dummy
 
+    scoreboard objectives add SetMaxHPDelay dummy
+
     scoreboard objectives add Temp dummy
     scoreboard objectives add Const dummy
 

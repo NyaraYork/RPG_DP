@@ -4,6 +4,13 @@
 # プレイヤーにIDとそのビットタグを付与する
     function common:init/id
 
-# プレイヤーにレベルとステータスを設定する
+# プレイヤーにレベルと必要な経験値を設定する
     function player:attribute/level/calc
-    function player:attribute/update
+
+# プレイヤーのステータスを設定する
+    function player:job/none/attribute
+    function common:attribute
+
+# プレイヤーのHPをHPバーに反映
+    scoreboard players operation @s HP = @s HPMax
+    function player:attribute/hp/value
