@@ -1,4 +1,4 @@
-#> common:init/id/tag
+#> common:id/tag
 # ビット化したIDをもとにタグを付与するコマンド
     #declare tag Bit01
     #declare tag Bit02

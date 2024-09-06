@@ -2,7 +2,7 @@
 # プレイヤーが初めてワールドに入った時に実行されるコマンド
     
 # プレイヤーにIDとそのビットタグを付与する
-    function common:init/id
+    function common:id/init
 
 # プレイヤーにレベルと必要な経験値を設定する
     function player:attribute/level/calc

@@ -1,4 +1,4 @@
-#> common:init/id
+#> common:id/init
 # エンティティにIDとそのビットタグを付与するコマンド
     #declare score_holder #Bit01
     #declare score_holder #Bit02
@@ -34,7 +34,7 @@
     #declare score_holder #Bit32
 
 # IDを取得
-    execute store result score @s EntityID run function common:init/id/number
+    execute store result score @s EntityID run function common:id/number
 
 # 取得したIDをビット化
     scoreboard players operation #Bit01 Temp = @s EntityID
@@ -161,7 +161,7 @@
     scoreboard players operation #Bit31 Temp /= #2 Const
 
 # ビット化したIDをもとにタグ付与
-    function common:init/id/tag
+    function common:id/tag
 
 # スコアリセット
     scoreboard players reset #Bit01 Temp
