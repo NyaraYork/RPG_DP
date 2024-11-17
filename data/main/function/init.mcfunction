@@ -13,13 +13,8 @@
 
     scoreboard objectives add HP dummy
     scoreboard objectives add HPMax dummy
-    scoreboard objectives add EP dummy
-    scoreboard objectives add EPMax dummy
     scoreboard objectives add Attack dummy
     scoreboard objectives add Defence dummy
-    scoreboard objectives add Speed dummy
-    scoreboard objectives add CritRate dummy
-    scoreboard objectives add CritDamage dummy
 
     scoreboard objectives add SetMaxHPDelay dummy
 
