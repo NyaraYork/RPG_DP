@@ -2,7 +2,7 @@
 # ロード時一度だけ実行されるコマンド
 
 # 常時読み込まれるチャンクを設定
-    execute in common:debug run forceload add 0 0
+    execute in common:debug run forceload add -1 -1 0 0
 
 # スコアボード作成
     scoreboard objectives add EntityID dummy
