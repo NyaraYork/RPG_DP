@@ -2,13 +2,13 @@
 # 召喚するモブの要素を削除するコマンド
 
 # 要素を削除
-    data remove storage spawner: data.SpawnPotentials[0]
+    data remove storage spawner: data.SpawnPotentials[-1]
 
 # 要素がなくなるまで再帰
-    execute if data storage spawner: data.SpawnPotentials[] run return run function spawner:spawn/weight/get
+    execute if data storage spawner: data.SpawnPotentials[-1] run return run function spawner:spawn/weight/get
 
 # 召喚可能なモブの要素があったら召喚するモブの数を決め召喚
-    execute if data storage spawner: data.SpawnPotential[] run function spawner:spawn/count/set
+    execute if data storage spawner: data.SpawnPotential[-1] run function spawner:spawn/count/set
 
 # スコアリセット
     scoreboard players reset #MinSpawnableLevel Temp
