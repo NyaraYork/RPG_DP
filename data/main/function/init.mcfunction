@@ -4,6 +4,9 @@
 # 常時読み込まれるチャンクを設定
     execute in common:debug run forceload add -1 -1 0 0
 
+# ゲームルールの設定
+    gamerule doMobSpawning false
+
 # スコアボード作成
     scoreboard objectives add EntityID dummy
 
