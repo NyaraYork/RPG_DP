@@ -1,5 +1,7 @@
 #> spawner:tick
 # スポナーに毎ティック実行するコマンド
+    #declare tag spawner
+    #declare storage spawner:
     #declare score_holder #PlayerPosX
     #declare score_holder #PlayerPosY
     #declare score_holder #PlayerPosZ
@@ -8,14 +10,11 @@
     #declare score_holder #SpawnerPosZ
     #declare score_holder #Distance
     #declare score_holder #RequiredPlayerRange
-    #declare storage spawner:
-    #declare tag spawner
 
-# プレイヤーの検知に必要な距離とクールタイムの初期化
+# スポナーのデータを取得
     data modify storage spawner: data set from entity @s data
     execute unless data storage spawner: data.RequiredPlayerRange run data modify storage spawner: data.RequiredPlayerRange set value 16.0d
     execute unless data storage spawner: data.Delay run data modify storage spawner: data.Delay set value 72000
-    data modify entity @s data set from storage spawner: data
 
 # プレイヤーの座標を取得
     data modify storage player: Pos set from entity @p[gamemode=!spectator] Pos
