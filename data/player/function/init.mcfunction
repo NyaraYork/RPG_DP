@@ -8,7 +8,7 @@
     function player:attribute/level/calc
 
 # プレイヤーのステータスを設定する
-    function player:job/none/attribute
+    function player:job/none/init
     function common:attribute
 
 # プレイヤーのHPをHPバーに反映

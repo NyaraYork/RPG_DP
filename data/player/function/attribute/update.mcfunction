@@ -8,7 +8,7 @@
     scoreboard players operation #HPRatio Temp /= @s HPMax
 
 # 職業ごとに異なる基礎ステータスを設定
-    execute if entity @s[team=] run function player:job/none/attribute
+    execute if entity @s[team=] run function player:job/none/init
 
 # レベルの数値で乗算
     function common:attribute
