@@ -1,4 +1,4 @@
-#> common:math/random
+#> lib:random
 # 指定された範囲で乱数を返すコマンド
     #declare storage common:
 

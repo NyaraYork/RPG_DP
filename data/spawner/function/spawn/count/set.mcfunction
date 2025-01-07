@@ -12,7 +12,7 @@
 # 召喚するモブの数を設定
     data modify storage common: random.Min set from storage spawner: data.MinSpawnCount
     data modify storage common: random.Max set from storage spawner: data.MaxSpawnCount
-    execute store result score #SpawnCount Temp run function common:math/random with storage common: random
+    execute store result score #SpawnCount Temp run function lib:random with storage common: random
 
 # SpawnCountが0になるまでモブを召喚
     function spawner:spawn/count/remove

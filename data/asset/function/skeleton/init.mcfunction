@@ -1,7 +1,7 @@
-#> mob:zombie/init
-# ゾンビの初期化をするコマンド
+#> asset:skeleton/init
+# スケルトンの初期化をするコマンド
 
-# ゾンビ固有のスコアを設定
+# スケルトン固有のスコアを設定
     scoreboard players set @s HPMax 29
     scoreboard players set @s Attack 23
     scoreboard players set @s Defence 23
