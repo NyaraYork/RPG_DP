@@ -10,13 +10,13 @@
     scoreboard players operation #SpawnerPosZ Temp /= #10 Const
 
 # 召喚するモブの数を設定
-    data modify storage common: random.Min set from storage spawner: data.MinSpawnCount
-    data modify storage common: random.Max set from storage spawner: data.MaxSpawnCount
-    execute store result score #SpawnCount Temp run function lib:random with storage common: random
+    data modify storage lib: random.Min set from storage spawner: data.MinSpawnCount
+    data modify storage lib: random.Max set from storage spawner: data.MaxSpawnCount
+    execute store result score #SpawnCount Temp run function lib:random with storage lib: random
 
 # SpawnCountが0になるまでモブを召喚
     function spawner:spawn/count/remove
 
 # リセット
-    data remove storage common: random
+    data remove storage lib: random
     scoreboard players reset #SpawnCount Temp
