@@ -11,7 +11,7 @@
     execute if entity @s[team=] run function player:job/none/init
 
 # レベルの数値で乗算
-    function common:attribute
+    function common:init/attribute
 
 # HP割合をステータス更新後の現在HPに反映
     scoreboard players operation @s HP = @s HPMax

@@ -3,4 +3,4 @@
 
 # レベルを取得してステータスを計算
     scoreboard players operation @s Level = #MobLevel Temp
-    function common:attribute
+    function common:init/attribute

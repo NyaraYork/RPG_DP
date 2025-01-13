@@ -1,4 +1,4 @@
-#> common:attribute
+#> common:init/attribute
 # エンティティのステータスを計算するコマンド
 
 # レベルをもとに計算
