@@ -1,5 +1,7 @@
 #> spawner:spawn/count/set
 # 召喚するモブの数を設定するコマンド
+    #declare score_holder #PlayerLevelAverage
+    #declare score_holder #PlayerCount
     #declare score_holder #SpawnCount
 
 # 召喚した時間を記録
@@ -8,6 +10,11 @@
 # 取得したスポナーの座標の小数点を切り捨てる
     scoreboard players operation #SpawnerPosX Temp /= #10 Const
     scoreboard players operation #SpawnerPosZ Temp /= #10 Const
+
+# プレイヤーの平均レベルを計算
+    scoreboard players operation #PlayerLevelAverage Temp += @a Level
+    execute store result score #PlayerCount Temp if entity @a
+    scoreboard players operation #PlayerLevelAverage Temp /= #PlayerCount Temp
 
 # 召喚するモブの数を設定
     data modify storage lib: random.Min set from storage spawner: data.MinSpawnCount
@@ -19,4 +26,6 @@
 
 # リセット
     data remove storage lib: random
+    scoreboard players reset #PlayerLevelAverage Temp
+    scoreboard players reset #PlayerCount Temp
     scoreboard players reset #SpawnCount Temp
