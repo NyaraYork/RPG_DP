@@ -1,4 +1,4 @@
-#> player:attribute/level/_give
+#> player:attribute/level/.give
 # プレイヤーに経験値を与えるコマンド(テスト用)
 
 # 経験値を与える
