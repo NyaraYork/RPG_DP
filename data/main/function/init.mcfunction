@@ -1,5 +1,5 @@
 #> main:init
-# ロード時一度だけ実行されるコマンド
+# ワールドの初期化をするコマンド
 
 # 常時読み込まれるチャンクを設定
     execute in common:debug run forceload add -1 -1 0 0
@@ -30,5 +30,5 @@
     scoreboard players set #10000 Const 10000
     scoreboard players set #-2147483648 Const -2147483648
 
-# 実行記録を残す(リリース時のみtrueに)
+# ワールドの初期化が完了したか否かを決定
     return 0

@@ -1,5 +1,5 @@
 #> main:tick
-# 毎ティック実行されるコマンド
+# 毎ティック実行するコマンド
 
 # プレイヤー
     execute as @a run function player:tick
