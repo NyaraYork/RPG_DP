@@ -5,7 +5,7 @@
     #declare score_holder #SpawnCount
 
 # 召喚した時間を記録
-    execute store result entity @s data.LastSpawnedTime int 1 run time query gametime
+    execute store result entity @s data.SpawnedTime int 1 run time query gametime
 
 # 取得したスポナーの座標の小数点を切り捨てる
     scoreboard players operation #SpawnerPosX Temp /= #10 Const
