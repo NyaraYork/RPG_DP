@@ -45,7 +45,7 @@
     execute store result score #RequiredPlayerRange Temp run data get storage spawner: data.RequiredPlayerRange 10
     scoreboard players operation #RequiredPlayerRange Temp *= #RequiredPlayerRange Temp
     execute if score #Distance Temp <= #RequiredPlayerRange Temp if data storage spawner: data.SpawnedTime run function spawner:spawn/delay
-    execute if score #Distance Temp <= #RequiredPlayerRange Temp unless data storage spawner: data.SpawnedTime run function spawner:spawn/weight/get
+    execute if score #Distance Temp <= #RequiredPlayerRange Temp unless data storage spawner: data.SpawnedTime run function spawner:spawn/potential/buffer
 
 # リセット
     data remove storage spawner: data

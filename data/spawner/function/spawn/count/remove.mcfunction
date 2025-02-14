@@ -11,7 +11,7 @@
     scoreboard players remove #SpawnCount Temp 1
 
 # 召喚可能なモブの配列(SpawnPotential)をSpawnPotentialsにコピー
-    data modify storage spawner: data.SpawnPotentials set from storage spawner: data.SpawnPotential
+    data modify storage spawner: data.SpawnPotentialsBuf set from storage spawner: data.SpawnPotentials
 
 # 召喚するモブを選択
     data modify storage lib: random.Min set value 1
