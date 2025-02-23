@@ -1,5 +1,5 @@
-#> spawner:spawn/potential/get
-# 召喚するモブの合計Weightを取得するコマンド
+#> spawner:spawn/potential/requirement/value
+# その他の値の条件をもとに召喚するモブを絞り込むコマンド
     #declare score_holder #MinSpawnableLevel
     #declare score_holder #MaxSpawnableLevel
     #declare score_holder #DayTime

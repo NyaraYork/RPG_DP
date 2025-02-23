@@ -11,7 +11,7 @@
 
 # 経過ティック数が遅延ティック数以上になったら召喚可能なモブを絞り込む
     execute store result score #Delay Temp run data get storage spawner: data.Delay
-    execute if score #GameTime Temp >= #Delay Temp run function spawner:spawn/potential/buffer
+    execute if score #GameTime Temp >= #Delay Temp run function spawner:spawn/potential/requirement/weather
 
 # スコアリセット
     scoreboard players reset #GameTime Temp
