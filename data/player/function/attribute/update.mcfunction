@@ -10,8 +10,8 @@
 # 職業ごとに異なる基礎ステータスを設定
     execute if entity @s[team=] run function player:job/none/init
 
-# レベルの数値で乗算
-    function common:init/attribute
+# 装備品やバフ効果のステータスを反映
+    function player:attribute/item
 
 # HP割合をステータス更新後の現在HPに反映
     scoreboard players operation @s HP = @s HPMax

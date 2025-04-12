@@ -4,7 +4,7 @@
 
 # レベルを取得してステータスを計算
     scoreboard players operation @s Level = #MobLevel Temp
-    function common:init/attribute
+    function common:attribute/calc
 
 # 敵モブのレベルを表示
     tag @s add vehicle
