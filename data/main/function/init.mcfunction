@@ -45,6 +45,7 @@
     scoreboard objectives add SetMaxHPDelay dummy
 
     scoreboard objectives add Temp dummy
+    scoreboard objectives add Global dummy
     scoreboard objectives add Const dummy
 
 # 定数を定義
