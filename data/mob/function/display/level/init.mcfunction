@@ -9,5 +9,5 @@
 
 # プレイヤーの平均レベルと敵モブのレベルの差をもとにレベルの色を変えて表示
     scoreboard players operation #MobLevel Temp -= #PlayerLevelAverage Temp
-    execute if score #MobLevel Temp matches 10.. run return run data modify entity @s text.color set value "red"
-    execute if score #MobLevel Temp matches ..-10 run return run data modify entity @s text.color set value "green"
+    execute if score #MobLevel Temp matches 10.. run data modify entity @s text.color set value "red"
+    execute if score #MobLevel Temp matches ..-10 run data modify entity @s text.color set value "green"
