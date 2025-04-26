@@ -1,12 +1,5 @@
 #> spawner:spawn/potential/requirement/value
 # その他の値の条件をもとに召喚するモブを絞り込むコマンド
-    #declare score_holder #MinSpawnableLevel
-    #declare score_holder #MaxSpawnableLevel
-    #declare score_holder #DayTime
-    #declare score_holder #MinSpawnableTime
-    #declare score_holder #MaxSpawnableTime
-    #declare score_holder #Weight
-    #declare score_holder #WeightSum
 
 # プレイヤーのレベルが指定の範囲内でなければその要素を削除
     execute store result score #MinSpawnableLevel Temp run data get storage spawner: data.SpawnPotentialsBuf[-1].Requirements.MinSpawnableLevel
@@ -21,10 +14,10 @@
     execute if score #MinSpawnableTime Temp matches 1.. if score #DayTime Temp < #MinSpawnableTime Temp run return run function spawner:spawn/potential/remove
     execute if score #MaxSpawnableTime Temp matches 1.. if score #DayTime Temp > #MaxSpawnableTime Temp run return run function spawner:spawn/potential/remove
 
-# 全ての条件を満たしたらWeightの値を合算
+# 全ての条件を満たしたらWeightを加算
+    data modify storage spawner: data.SpawnPotentials prepend from storage spawner: data.SpawnPotentialsBuf[-1]
     execute store result score #Weight Temp run data get storage spawner: data.SpawnPotentialsBuf[-1].Weight
     scoreboard players operation #WeightSum Temp += #Weight Temp
-    data modify storage spawner: data.SpawnPotentials prepend from storage spawner: data.SpawnPotentialsBuf[-1]
 
 # 要素を削除
     function spawner:spawn/potential/remove

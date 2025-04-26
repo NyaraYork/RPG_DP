@@ -2,7 +2,7 @@
 # ワールドの初期化をするコマンド
 
 # 常時読み込まれるチャンクを設定
-    execute in common:debug run forceload add -1 -1 0 0
+    execute in lib:debug run forceload add -1 -1 0 0
 
 # ゲームルールの設定
     gamerule doMobSpawning false
