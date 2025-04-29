@@ -8,10 +8,10 @@
     scoreboard players operation #HPRatio Temp /= @s HPMax
 
 # 職業ごとに異なる基礎ステータスを設定
-    execute if entity @s[team=] run function player:job/none/init
+    execute if entity @s[team=] run function player:job/none/set_attribute
 
-# 装備品やバフ効果のステータスを反映
-    function player:attribute/item
+# 装備品のステータスを反映
+    function player:attribute/get
 
 # HP割合をステータス更新後の現在HPに反映
     scoreboard players operation @s HP = @s HPMax

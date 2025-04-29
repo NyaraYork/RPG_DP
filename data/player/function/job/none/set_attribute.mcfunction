@@ -1,4 +1,4 @@
-#> player:job/none/init
+#> player:job/none/set_attribute
 # 無職のプレイヤーの基礎ステータスを設定するコマンド
 
 # 無職の基礎ステータスを設定

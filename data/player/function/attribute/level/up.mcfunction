@@ -2,7 +2,7 @@
 # プレイヤーがレベルアップした時に実行するコマンド
 
 # 獲得した経験値が必要な経験値を下回るまでレベルアップ
-    function player:attribute/level/calc
+    function player:attribute/level/calc_xp
 
 # ステータスを更新
     function player:attribute/update

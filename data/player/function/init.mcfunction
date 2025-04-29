@@ -5,11 +5,11 @@
     execute store result score @s EntityID run function common:id/get
 
 # プレイヤーにレベルと必要な経験値を設定する
-    function player:attribute/level/calc
+    function player:attribute/level/calc_xp
 
 # プレイヤーのステータスを設定する
-    function player:job/none/init
-    function player:attribute/item
+    function player:job/none/set_attribute
+    function player:attribute/get
 
 # プレイヤーのHPをHPバーに反映
     scoreboard players operation @s HP = @s HPMax
