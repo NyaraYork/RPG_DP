@@ -1,4 +1,4 @@
-#> player:trigger/inventory/selected_slot/changed
+#> player:trigger/selected_slot/changed
 # プレイヤーの選択しているスロットが変更されたときに実行するコマンド
 
 # ステータス更新
