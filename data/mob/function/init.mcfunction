@@ -2,9 +2,8 @@
 # 敵モブの初期化をするコマンド
     #declare tag vehicle
 
-# レベルを取得してステータスを計算
+# レベルを取得
     scoreboard players operation @s Level = #MobLevel Temp
-    function common:attribute/calc
 
 # 敵モブのレベルを表示
     tag @s add vehicle
