@@ -5,6 +5,7 @@
     function player:attribute/level/calc_xp
 
 # ステータスを更新
+    function common:effect/get/id
     function player:attribute/update
 
 # レベルアップ時の演出
