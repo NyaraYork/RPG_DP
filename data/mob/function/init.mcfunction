@@ -1,9 +1,8 @@
 #> mob:init
 # 敵モブの初期化をするコマンド
-    #declare tag vehicle
 
-# エンティティIDを付与
-    execute store result score @s EntityID run function common:id/set
+# エンティティIDと2進数タグを付与
+    function common:id/tag
 
 # モブIDを付与
     data modify entity @s data.ID set from storage spawner: data.ID

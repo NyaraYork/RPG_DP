@@ -10,7 +10,7 @@
 # チームから脱退
     team leave @s 
 
-# ビットタグを削除
+# 2進数タグを削除
     tag @s remove Bit01
     tag @s remove Bit02
     tag @s remove Bit03
