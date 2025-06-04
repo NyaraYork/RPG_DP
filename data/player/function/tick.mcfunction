@@ -7,7 +7,7 @@
 
 # プレイヤーの選択しているスロットが変わったらステータス更新
     execute store result score #SelectedSlotCurr Temp run data get entity @s SelectedItemSlot
-    execute unless score #SelectedSlotCurr Temp = @s SelectedSlotPrev run function player:trigger/selected_slot/changed
+    execute unless score #SelectedSlotCurr Temp = @s SelectedSlotPrev run function player:trigger/changed/selected_slot
 
 # プレイヤーの最大HPをHPバーに反映
     execute if score @s SetMaxHPDelay matches 0 run function player:attribute/hp/max

@@ -1,4 +1,4 @@
-#> player:trigger/inventory/changed
+#> player:trigger/changed/inventory
 # プレイヤーのインベントリが更新されたときに実行するコマンド
 
 # ステータス更新
@@ -6,4 +6,4 @@
     function player:attribute/update
 
 # 進捗リセット
-    advancement revoke @s only player:inventory_changed
+    advancement revoke @s only player:trigger/changed/inventory
