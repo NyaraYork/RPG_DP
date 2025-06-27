@@ -1,7 +1,7 @@
-#> asset:creeper/set_attribute
-# クリーパーのステータスを設定するコマンド
+#> asset:mob/spider/set_attribute
+# クモのステータスを設定するコマンド
 
-# クリーパーの基礎ステータスを設定
+# クモの基礎ステータスを設定
     scoreboard players set @s HPMax 29
     scoreboard players set @s ATK 23
     scoreboard players set @s DEF 23

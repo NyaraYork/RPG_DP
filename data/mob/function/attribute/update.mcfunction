@@ -2,4 +2,4 @@
 # モブのステータスを更新するコマンド
 
 # モブのステータスを更新
-    $function asset:$(ID)/set_attribute
+    $function asset:mob/$(ID)/set_attribute
