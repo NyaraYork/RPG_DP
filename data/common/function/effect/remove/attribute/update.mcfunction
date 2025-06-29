@@ -1,5 +1,5 @@
-#> common:effect/remove/is_player
-# プレイヤーとそれ以外でステータス更新処理を分けるコマンド
+#> common:effect/remove/attribute/update
+# エフェクトを削除したエンティティのステータスを更新するコマンド
 
 # プレイヤーの場合
     execute if entity @s[type=player] run return run function player:attribute/update

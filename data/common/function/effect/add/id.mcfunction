@@ -9,6 +9,3 @@
 
 # 追加後のエフェクトを取得
     function common:effect/get/data with storage common: EffectData
-
-# ストレージ削除
-    data remove storage common: EffectData
