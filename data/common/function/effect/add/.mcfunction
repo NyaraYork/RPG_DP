@@ -9,7 +9,7 @@
     function common:effect/add/id
 
 # ステータスを更新
-    function common:effect/remove/attribute/update
+    function common:effect/update_attribute
 
 # ストレージ削除
     #data remove storage common: ApplyEffects

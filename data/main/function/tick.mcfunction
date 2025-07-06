@@ -2,7 +2,7 @@
 # 毎ティック実行するコマンド
 
 # エフェクト
-    function common:effect/remove/duration/tick
+    function common:effect/tick
 
 # プレイヤー
     execute as @a run function player:tick

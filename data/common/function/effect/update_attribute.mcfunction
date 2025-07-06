@@ -1,4 +1,4 @@
-#> common:effect/remove/attribute/update
+#> common:effect/update_attribute
 # エフェクトを削除したエンティティのステータスを更新するコマンド
 
 # プレイヤーの場合

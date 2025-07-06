@@ -5,4 +5,4 @@
     data remove storage common: data[-1].effects[{duration:0}]
 
 # エンティティのステータスを更新
-    function common:effect/remove/attribute/get
+    function common:effect/get/entitydata
