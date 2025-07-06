@@ -1,8 +1,18 @@
 #> common:effect/add/data
-# エンティティへエフェクトを追加するコマンド
+# エフェクトのデータを追加するコマンド
 
-# 既にエンティティのデータがある場合エフェクトのデータのみ追加
-    $execute if data storage common: data[{ID:$(ID)}] run return run data modify storage common: data[{ID:$(ID)}].effects prepend from storage common: EffectData.effects[]
+# 付与するエフェクトと同じ名前のエフェクトを取り出す
+    $data modify storage common: EffectsBuf prepend from storage common: EntityData.effects[{name:$(name)}]
+    $data remove storage common: EntityData.effects[{name:$(name)}]
 
-# ない場合エンティティIDと同時に追加
-    data modify storage common: data prepend from storage common: EffectData
+# 取り出したエフェクトのstackを1減らす
+    function common:effect/remove/stack
+
+# エフェクトのデータを追加
+    data modify storage common: EntityData.effects prepend from storage common: ApplyEffectsBuf[-1]
+
+# 最後尾のデータを削除
+    data remove storage common: ApplyEffectsBuf[-1]
+
+# データがなくなるまで再帰
+    function common:effect/add/data with storage common: ApplyEffectsBuf[-1]
