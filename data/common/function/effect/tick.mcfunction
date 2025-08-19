@@ -1,24 +1,21 @@
 #> common:effect/tick
-# エフェクトに毎ティック実行するコマンド
+# エフェクトに常時実行するコマンド
 
-# durationが0のエフェクトのデータを削除
-    execute if data storage common: data[-1].effects[{duration:0}] run function common:effect/remove/duration/data
+# durationが0になったエフェクトの付与対象リストを取得
+    data modify storage common: UpdatedEntities prepend from storage common: effects[{duration:0}].target.ID[]
+    data remove storage common: effects[{duration:0}]
 
-# エフェクトのdurationの値を1減らす
-    data modify storage common: DataBuf append from storage common: data[-1]
-    data remove storage common: DataBuf[-1].effects[]
-    function common:effect/remove/duration/value
+# エフェクトの持続時間を1減らし付与対象を更新
+    data modify storage common: EffectsBuf set from storage common: effects
+    data remove storage common: effects
+    function common:effect/duration/remove
 
-# エンティティのデータを削除
-    data remove storage common: data[-1]
+# エンティティ更新リストに格納されているIDのエンティティのステータスを取得
+    function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
 
-# エンティティのデータがなくなるまで再帰
-    execute if data storage common: data[] run return run function common:effect/tick
-
-# durationの値を1減らした後のエフェクトのデータを元の場所に戻す
-    data modify storage common: data set from storage common: DataBuf
+# 更新した記録を削除
+    data remove storage common: effects[].target.updated
 
 # リセット
-    data remove storage common: DataBuf
-    scoreboard players reset #TargetID Temp
+    data remove storage common: EffectsBuf
     scoreboard players reset #Duration Temp
