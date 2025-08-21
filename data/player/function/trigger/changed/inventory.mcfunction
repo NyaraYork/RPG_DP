@@ -2,7 +2,7 @@
 # プレイヤーのインベントリが更新されたときに実行するコマンド
 
 # ステータス更新
-    function common:effect/get/id
+    function common:attribute/modifier/effect/id/get
     function player:attribute/update
 
 # 進捗リセット
