@@ -2,7 +2,7 @@
 # プレイヤーが初めてワールドに入った時に実行されるコマンド
     
 # プレイヤーにIDと2進数タグを付与する
-    function common:id/tag
+    function common:id/tag/add
 
 # プレイヤーにレベルと必要な経験値を設定する
     function player:attribute/level/calc_xp

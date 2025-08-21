@@ -2,7 +2,7 @@
 # 敵モブの初期化をするコマンド
 
 # エンティティIDと2進数タグを付与
-    function common:id/tag
+    function common:id/tag/add
 
 # モブIDを付与
     data modify entity @s data.ID set from storage spawner: data.ID

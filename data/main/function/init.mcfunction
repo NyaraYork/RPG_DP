@@ -53,7 +53,7 @@
     scoreboard players set #10 Const 10
     scoreboard players set #1000 Const 1000
     scoreboard players set #10000 Const 10000
-    # scoreboard players set #-2147483648 Const -2147483648
+    scoreboard players set #-2147483648 Const -2147483648
 
 # ワールドの初期化が完了したか否かを決定
     return 0

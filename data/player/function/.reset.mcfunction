@@ -11,6 +11,7 @@
     team leave @s 
 
 # 2進数タグを削除
+    tag @s remove Bit00
     tag @s remove Bit01
     tag @s remove Bit02
     tag @s remove Bit03
