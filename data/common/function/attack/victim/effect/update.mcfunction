@@ -2,7 +2,7 @@
 # 付与対象が攻撃したエンティティのエフェクトを更新するコマンド
 
 # 付与対象を更新
-    execute as @n[tag=attacker] run function common:effect/target/predicate/id/check
+    execute at @s as @n[tag=attacker] run function common:effect/target/predicate/id/check
     $data modify storage common: EffectsBuf[{name:$(name)}].target.ID set from storage common: TargetID
     data remove storage common: TargetID
 
