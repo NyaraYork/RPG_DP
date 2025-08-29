@@ -1,7 +1,7 @@
 #> common:attack/victim/effect/get
-# 付与対象が攻撃したエンティティのエフェクトを取得するコマンド
+# 攻撃したエンティティに付与するエフェクトを取得するコマンド
 
-# 付与対象が攻撃したエンティティのエフェクトを取得
+# 攻撃したエンティティに付与するエフェクトを取得
     $data modify storage common: EffectsBuf prepend from storage common: effects[{owner:$(value),target:{predicate:{type:"attacker"}}}]
     $data remove storage common: effects[{owner:$(value),target:{predicate:{type:"attacker"}}}]
 

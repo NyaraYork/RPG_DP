@@ -1,5 +1,5 @@
 #> common:attack/victim/effect/update
-# 付与対象が攻撃したエンティティのエフェクトを更新するコマンド
+# 攻撃したエンティティに付与するエフェクトを更新するコマンド
 
 # 付与対象を更新
     execute at @s as @n[tag=attacker] run function common:effect/target/predicate/id/check
