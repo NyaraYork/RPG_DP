@@ -1,4 +1,4 @@
-#> common:attribute/modifier/operation/multiplied_base
+#> common:attribute/modifier/operation/multiply_base
 # ステータス補正値を基礎ステータスに乗算するコマンド
 
 # 取得したステータス補正値を基礎ステータスへ乗算する数値に加算
@@ -9,7 +9,7 @@
     data remove storage common: AttributeModifiersBuf[-1]
 
 # ステータス補正値がなくなるまで再帰
-    function common:attribute/modifier/operation/multiplied_base with storage common: AttributeModifiersBuf[-1]
+    function common:attribute/modifier/operation/multiply_base with storage common: AttributeModifiersBuf[-1]
 
 # 加算したステータス補正値を基礎ステータスに乗算
     $scoreboard players add #$(type)Multiplier Temp 1000
