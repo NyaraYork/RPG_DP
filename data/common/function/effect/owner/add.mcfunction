@@ -13,4 +13,5 @@
 # リセット
     data remove storage common: EffectsBuf
     data remove storage common: RemoveStack
+    data remove storage common: trigger
     scoreboard players reset #Stack Temp

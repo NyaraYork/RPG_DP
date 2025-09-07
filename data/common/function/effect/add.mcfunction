@@ -6,8 +6,13 @@
     $data remove storage common: effects[{owner:$(owner),name:$(name)}]
     function common:effect/stack/remove
 
-# エフェクトの付与対象を取得する
-    execute if data storage common: EffectsBuf[-1].target.predicate{type:"any"} unless data storage common: EffectsBuf[-1].target.updated run function common:effect/target/update with storage common: EffectsBuf[-1]
+# エフェクトの効果を適用する
+    data modify storage common: trigger set from storage common: EffectsBuf[-1].trigger
+    execute if data storage common: {trigger:"applied"} unless data storage common: EffectsBuf[-1].target.NextID run function common:effect/trigger/applied
+
+# 更新後の付与対象のIDを更新前の付与対象のIDに移動
+    data modify storage common: EffectsBuf[-1].target.ID set from storage common: EffectsBuf[-1].target.NextID
+    data remove storage common: EffectsBuf[-1].target.NextID
 
 # エフェクトを追加
     data modify storage common: effects prepend from storage common: EffectsBuf[-1]

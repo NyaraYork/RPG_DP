@@ -3,8 +3,8 @@
 
 # 取得したステータス補正値を最終ステータスに乗算
     execute store result score #AttributeModifierAmount Temp run data get storage common: AttributeModifiersBuf[-1].amount 1000
-    $scoreboard players operation @s $(type) *= #AttributeModifierAmount Temp
-    $scoreboard players operation @s $(type) /= #1000 Const
+    $scoreboard players operation @s $(attribute) *= #AttributeModifierAmount Temp
+    $scoreboard players operation @s $(attribute) /= #1000 Const
 
 # 取得したステータス補正値は削除
     data remove storage common: AttributeModifiersBuf[-1]
