@@ -40,10 +40,10 @@
     execute if entity @s[advancements={player:trigger/attacked/melee={Bit32_1=true}}] run scoreboard players operation #VictimID Temp += #-2147483648 Const
     execute as @e[scores={EntityID=-2147483648..2147483647}] if score @s EntityID = #VictimID Temp run tag @s add victim
 
-# スコアリセット
-    scoreboard players reset #VictimID Temp
-
 # 他の武器を持っていた場合武器種ごとに円状に範囲を指定して追加でタグを付与
     execute if entity @s[advancements={player:trigger/attacked/melee={charged=true}}] if items entity @s weapon.mainhand *[custom_data~{weapon:"axe"}] as @e[distance=..4,tag=!attacker,scores={EntityID=-2147483648..2147483647}] at @n[tag=victim] if entity @s[distance=..4] run tag @s add victim
     execute if entity @s[advancements={player:trigger/attacked/melee={charged=true}}] if items entity @s weapon.mainhand *[custom_data~{weapon:"dagger"}] as @e[distance=..3.5,tag=!attacker,scores={EntityID=-2147483648..2147483647}] at @n[tag=victim] if entity @s[distance=..3.5] run tag @s add victim
     execute if entity @s[advancements={player:trigger/attacked/melee={charged=true}}] if items entity @s weapon.mainhand *[custom_data~{weapon:"sword"}] as @e[distance=..4.5,tag=!attacker,scores={EntityID=-2147483648..2147483647}] at @n[tag=victim] if entity @s[distance=..4.5] run tag @s add victim
+
+# スコアリセット
+    scoreboard players reset #VictimID Temp
