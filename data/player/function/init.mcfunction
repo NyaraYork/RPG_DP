@@ -9,7 +9,7 @@
 
 # プレイヤーのステータスを設定する
     function player:job/none/set_attribute
-    function player:attribute/get
+    function common:attribute/calc
 
 # プレイヤーのHPをHPバーに反映
     scoreboard players operation @s HP = @s HPMax
