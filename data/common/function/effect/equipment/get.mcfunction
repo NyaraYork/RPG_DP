@@ -43,7 +43,7 @@
     data modify storage common: EffectsBuf append from storage common: Inventory[].components."minecraft:custom_data".effects[]
 
 # 取得したエフェクトを付与
-    $data modify storage common: UpdatedEntities set from storage common: effects[{owner:$(value),applied_by_item:true}].target.ID
+    $data modify storage common: UpdatedEntities prepend from storage common: effects[{owner:$(value),applied_by_item:true}].target.ID[]
     $data remove storage common: effects[{owner:$(value),applied_by_item:true}]
     data modify storage common: EffectsBuf[].applied_by_item set value true
     function common:effect/owner/add
