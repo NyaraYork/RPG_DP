@@ -1,6 +1,6 @@
 {
     "pack": {
-        "pack_format": 81,
-        "description": "for Minecraft 1.21.7"
+        "description": "for Minecraft 1.21.10",
+        "min_format": 88
     }
 }
