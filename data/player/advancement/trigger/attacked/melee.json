@@ -13,12 +13,26 @@
                 }
             }
         },
-        "uncharged_0.25-0.499": {
+        "uncharged_0.25-0.333": {
             "trigger": "minecraft:player_hurt_entity",
             "conditions": {
                 "damage": {
                     "dealt": {
                         "min": 0.25,
+                        "max": 0.333
+                    },
+                    "type": {
+                        "is_direct": true
+                    }
+                }
+            }
+        },
+        "uncharged_0.334-0.499": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "dealt": {
+                        "min": 0.334,
                         "max": 0.499
                     },
                     "type": {
@@ -899,7 +913,8 @@
     "requirements": [
         [
             "uncharged_0-0.249",
-            "uncharged_0.25-0.499",
+            "uncharged_0.25-0.333",
+            "uncharged_0.334-0.499",
             "uncharged_0.5-0.999",
             "charged",
             "crit"

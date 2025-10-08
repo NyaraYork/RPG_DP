@@ -43,13 +43,13 @@
 
     scoreboard objectives add SelectedSlotPrev dummy
     scoreboard objectives add SetMaxHPDelay dummy
+    scoreboard objectives add DisplayTicks dummy
 
     scoreboard objectives add Temp dummy
     scoreboard objectives add Global dummy
     scoreboard objectives add Const dummy
 
 # 定数を定義
-    scoreboard players set #2 Const 2
     scoreboard players set #10 Const 10
     scoreboard players set #1000 Const 1000
     scoreboard players set #10000 Const 10000

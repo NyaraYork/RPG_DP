@@ -4,6 +4,9 @@
 # エフェクト
     function common:effect/tick
 
+# ダメージ表示エンティティ
+    execute as @e[type=text_display,tag=damage_indicator] at @s run function common:damage/indicator/tick
+
 # プレイヤー
     execute as @a run function player:tick
 

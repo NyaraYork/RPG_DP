@@ -1,8 +1,8 @@
-#> player:attack/melee/add_tag
+#> player:attack/melee/tag/add
 # 近接攻撃されたエンティティにタグを付与するコマンド
 
 # 槍を持っていた場合線状に範囲を指定してタグを付与
-    execute if entity @s[advancements={player:trigger/attacked/melee={charged=true}}] if items entity @s weapon.mainhand *[custom_data~{weapon:"spear"}] anchored eyes positioned ^ ^ ^ run return run function player:attack/melee/spear/add_tag
+    execute if entity @s[advancements={player:trigger/attacked/melee={charged=true}}] if items entity @s weapon.mainhand *[custom_data~{weapon:"spear"}] anchored eyes positioned ^ ^ ^ run return run function player:attack/melee/tag/spear/add
 
 # 槍を持っていなかった場合IDを2進数から10進数に変換し一致するエンティティにタグを付与
     scoreboard players set #VictimID Temp 0

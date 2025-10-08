@@ -10,6 +10,12 @@
 # レベルを取得
     scoreboard players operation @s Level = #MobLevel Temp
 
+# ステータス補正値を適用
+    function common:attribute/calc
+
+# HPを満タンまで回復する
+    scoreboard players operation @s HP = @s HPMax
+
 # 敵モブのレベルを表示
     tag @s add vehicle
     execute summon text_display run function mob:display/level/init
