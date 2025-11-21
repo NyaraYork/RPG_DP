@@ -14,10 +14,8 @@
     execute if score #MinSpawnableTime Temp matches 1.. if score #DayTime Temp < #MinSpawnableTime Temp run return run function spawner:spawn/potential/remove
     execute if score #MaxSpawnableTime Temp matches 1.. if score #DayTime Temp > #MaxSpawnableTime Temp run return run function spawner:spawn/potential/remove
 
-# 全ての条件を満たしたらWeightを加算
+# 全ての条件を満たしたらWeightを加算し要素を削除
     data modify storage spawner: data.SpawnPotentials prepend from storage spawner: data.SpawnPotentialsBuf[-1]
     execute store result score #Weight Temp run data get storage spawner: data.SpawnPotentialsBuf[-1].Weight
     scoreboard players operation #WeightSum Temp += #Weight Temp
-
-# 要素を削除
     function spawner:spawn/potential/remove

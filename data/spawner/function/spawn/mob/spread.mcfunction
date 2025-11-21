@@ -1,7 +1,7 @@
 #> spawner:spawn/mob/spread
 # 召喚するモブの座標をずらすコマンド
 
-# 座標をずらしてから召喚
+# 座標をずらして召喚
     $clone from minecraft:overworld $(SpawnPosX) ~-$(SpawnRange) $(SpawnPosZ) $(SpawnPosX) ~$(SpawnRange) $(SpawnPosZ) to lib:debug -10 ~-$(SpawnRange) -10
     $execute in lib:debug positioned -10 ~ -10 positioned over ocean_floor in minecraft:overworld positioned $(SpawnPosX).5 ~ $(SpawnPosZ).5 run function asset:mob/$(ID)/summon
 
