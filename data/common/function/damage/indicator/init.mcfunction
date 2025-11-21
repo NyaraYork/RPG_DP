@@ -16,4 +16,4 @@
     execute if data storage common: damage{element:"Wind"} run return run data modify entity @s text.color set value "dark_green"
     execute if data storage common: damage{element:"Ice"} run return run data modify entity @s text.color set value "aqua"
     execute if data storage common: damage{element:"Dark"} run return run data modify entity @s text.color set value "dark_purple"
-    execute if data storage common: damage{element:"Light"} run data modify entity @s text.color set value "gray"
+    execute if data storage common: damage{element:"Light"} run data modify entity @s text.color set value "#ffffe0"
