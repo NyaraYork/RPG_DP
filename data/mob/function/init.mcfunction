@@ -1,5 +1,5 @@
 #> mob:init
-# 敵モブの初期化をするコマンド
+# モブの初期化をするコマンド
 
 # エンティティIDと2進数タグを付与
     function common:id/tag/add
@@ -16,10 +16,10 @@
 # HPを満タンまで回復する
     scoreboard players operation @s HP = @s HPMax
 
-# 敵モブのレベルを表示
+# モブのレベルを表示
     tag @s add vehicle
-    execute summon text_display run function mob:display/level/init
+    execute summon text_display run function mob:attribute/level/display
 
-# 敵モブのHPバーを初期化
-    execute summon text_display run function mob:display/hp/init
+# モブのHPバーを初期化
+    execute summon text_display run function mob:attribute/hp/init
     tag @s remove vehicle

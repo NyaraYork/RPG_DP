@@ -13,8 +13,8 @@
     execute as @n[tag=attacker] run function common:damage/attacker/element/id/get
     function common:damage/victim/calc with storage common: damage
 
-# ダメージを与える
-    function common:damage/deal
+# ダメージを受ける
+    function common:damage/take
 
 # エフェクトの付与対象を削除
     $data modify storage common: UpdatedEntities prepend from storage common: effects[{owner:$(value),trigger:"hurt"}].target.ID[]
