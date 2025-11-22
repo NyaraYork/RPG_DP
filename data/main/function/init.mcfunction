@@ -41,6 +41,7 @@
     scoreboard objectives add DarkRES dummy
     scoreboard objectives add LightRES dummy
 
+    scoreboard objectives add HPBarLength dummy
     scoreboard objectives add SelectedSlotPrev dummy
     scoreboard objectives add SetMaxHPDelay dummy
     scoreboard objectives add DisplayTicks dummy
@@ -51,6 +52,7 @@
 
 # 定数を定義
     scoreboard players set #10 Const 10
+    scoreboard players set #100 Const 100
     scoreboard players set #1000 Const 1000
     scoreboard players set #10000 Const 10000
     scoreboard players set #-2147483648 Const -2147483648
