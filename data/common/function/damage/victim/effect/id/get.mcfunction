@@ -1,4 +1,4 @@
-#> common:damage/victim/id/get
+#> common:damage/victim/effect/id/get
 # 攻撃されたエンティティのIDを取得するコマンド
 
 # 攻撃されたエンティティのIDを取得

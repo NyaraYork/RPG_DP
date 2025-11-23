@@ -9,7 +9,7 @@
     function common:damage/attacker/effect/apply
 
 # 攻撃されたエンティティのIDを取得
-    execute as @e[tag=victim] at @s run function common:damage/victim/id/get
+    execute as @e[tag=victim] at @s run function common:damage/victim/effect/id/get
 
 # エフェクトの付与対象を削除しステータスを元に戻す
     $data modify storage common: UpdatedEntities prepend from storage common: effects[{owner:$(value),trigger:"attacked"}].target.ID[]
