@@ -1,15 +1,13 @@
 #> mob:attribute/hp/update
 # モブのHPバーを更新するコマンド
 
-# Countを1増やす
-    scoreboard players add #Count Temp 1
+# HP割合を計算
+    scoreboard players operation #HPRatio Temp = @s HPBarLength
+    scoreboard players operation #HPRatio Temp *= @s HP
+    scoreboard players operation #HPRatio Temp /= @s HPMax
 
-# HPバー表示に必要な値を設定
-    execute if score #Count Temp <= #HPRatio Temp run data modify storage mob: HPBar append value 1
-    execute if score #Count Temp > #HPRatio Temp run data modify storage mob: HPBar append value 0
-
-# HPBarLengthの値まで再帰
-    execute if score #Count Temp < @s HPBarLength run return run function mob:attribute/hp/update
+# モブのHPバー表示に必要なデータを設定
+    function mob:attribute/hp/set_data
 
 # HPバーの両端に枠を入れる
     data modify storage mob: HPBar prepend value 2
