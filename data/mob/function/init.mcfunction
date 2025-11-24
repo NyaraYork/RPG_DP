@@ -15,11 +15,3 @@
 
 # HPを満タンまで回復する
     scoreboard players operation @s HP = @s HPMax
-
-# モブのレベルを表示
-    tag @s add vehicle
-    execute summon text_display run function mob:attribute/level/display
-
-# モブのHPバーを初期化
-    execute summon text_display run function mob:attribute/hp/init
-    tag @s remove vehicle
