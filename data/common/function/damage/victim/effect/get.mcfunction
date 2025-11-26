@@ -13,6 +13,9 @@
     execute as @n[tag=attacker] run function common:damage/attacker/element/id/get
     function common:damage/victim/calc with storage common: damage
 
+# 攻撃したプレイヤーにタグを付与
+    $tag @p[tag=attacker] add attacked_$(value)
+
 # ダメージを与える
     function common:damage/deal
 

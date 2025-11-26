@@ -1,13 +1,25 @@
 #> player:attribute/level/up
-# プレイヤーがレベルアップした時に実行するコマンド
+# プレイヤーのレベルをアップするコマンド
+
+# レベルアップ
+    scoreboard players add @s Level 1
+
+# 獲得した経験値は超過した分だけ残す
+    scoreboard players operation @s XP -= @s XPRequired
+
+# 次のレベルに必要な経験値を計算
+    scoreboard players set @s XPRequired 2
+    scoreboard players operation @s XPRequired += @s Level
+    scoreboard players operation @s XPRequired *= @s Level
 
 # 獲得した経験値が必要な経験値を下回るまでレベルアップ
-    function player:attribute/level/calc_xp
+    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run return run function player:attribute/level/up
 
-# ステータスを更新
-    function common:attribute/modifier/effect/id/get
+# ステータス更新
+    execute store result storage common: ID.value int 1 run scoreboard players get @s EntityID
+    function player:effect/attribute/get with storage common: ID
     function player:attribute/update
 
-# レベルアップ時の演出
+# レベルアップ演出
     tellraw @s [{"text":"レベルが","color":"green"},{"score":{"name":"@s","objective":"Level"},"color":"green"},{"text":"に上がった！","color":"green"}]
     playsound entity.player.levelup player @s ~ ~ ~ 1 1

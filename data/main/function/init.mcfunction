@@ -13,6 +13,7 @@
     scoreboard objectives add Level dummy
     scoreboard objectives add XP dummy
     scoreboard objectives add XPRequired dummy
+    scoreboard objectives add XPGrant dummy
     scoreboard objectives add HP dummy
     scoreboard objectives add HPMax dummy
     scoreboard objectives add ATK dummy
