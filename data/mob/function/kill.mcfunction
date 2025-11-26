@@ -1,8 +1,8 @@
 #> mob:kill
 # モブをキルするコマンド
 
-# レベルとHPバーの表示を消去
-    execute on passengers run kill @s
+# モブの種類ごとに個別のキル処理
+    $function asset:mob/$(ID)/kill
 
 # キル
     kill @s

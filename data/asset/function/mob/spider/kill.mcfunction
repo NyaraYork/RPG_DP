@@ -1,5 +1,5 @@
 #> asset:mob/spider/kill
-# クモをキルするコマンド
+# クモのキル処理をするコマンド
 
-# キル処理
-    function mob:kill
+# レベルとHPバーの表示を消去
+    execute on passengers run kill @s
