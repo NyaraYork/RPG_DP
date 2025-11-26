@@ -1,5 +1,5 @@
-#> asset:mob/skeleton/spawn
-# スケルトンをスポーンさせるコマンド
+#> asset:mob/skeleton/summon
+# スケルトンを召喚するコマンド
 
 # スケルトンを召喚して初期化
     execute summon skeleton run function asset:mob/skeleton/init

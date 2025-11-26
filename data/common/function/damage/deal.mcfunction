@@ -1,5 +1,5 @@
-#> common:damage/take
-# ダメージを受けるコマンド
+#> common:damage/deal
+# ダメージを与えるコマンド
 
 # HPをダメージで減算
     scoreboard players operation @s HP -= #Damage Temp

@@ -1,5 +1,5 @@
-#> mob:die
-# モブが死亡したときに実行するコマンド
+#> mob:kill
+# モブをキルするコマンド
 
 # レベルとHPバーの表示を消去
     execute on passengers run kill @s
