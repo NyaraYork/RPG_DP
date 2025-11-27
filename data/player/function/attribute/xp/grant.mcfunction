@@ -2,7 +2,7 @@
 # プレイヤーに経験値を与えるコマンド
 
 # 経験値獲得演出
-    tellraw @s [{"text":"経験値獲得"},{"text":"+","color":"yellow"},{"score":{"name":"#GrantXP","objective":"Temp"},"color":"yellow"}]
+    tellraw @s [{text:"+",color:"yellow"},{score:{name:"#GrantXP",objective:"Temp"}},{text:"経験値獲得",color:"white"}]
     playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 
 # プレイヤーに経験値を与えレベルアップ判定
