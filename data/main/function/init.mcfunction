@@ -5,7 +5,7 @@
     execute in lib:debug run forceload add -1 -1 0 0
 
 # ゲームルールの設定
-    gamerule doMobSpawning false
+    gamerule spawn_mobs false
 
 # スコアボード作成
     scoreboard objectives add EntityID dummy
