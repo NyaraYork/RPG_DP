@@ -8,7 +8,7 @@
     function common:damage/attacker/effect/id/get
 
 # 攻撃されたエンティティをノックバックさせる
-    execute as @e[tag=victim] run function lib:motion/knockback
+    execute as @e[tag=victim] run function lib:motion/apply {type:"knockback"}
 
 # タグ削除
     tag @s remove attacker
