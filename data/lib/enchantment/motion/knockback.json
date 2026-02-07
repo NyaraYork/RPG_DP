@@ -44,6 +44,15 @@
                 }
             },
             {
+                "requirements": {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "flags": {
+                            "is_on_ground": true
+                        }
+                    }
+                },
                 "effect": {
                     "type": "minecraft:apply_impulse",
                     "direction": [
