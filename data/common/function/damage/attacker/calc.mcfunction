@@ -3,8 +3,8 @@
 
 # 攻撃力をダメージ倍率で乗算
     scoreboard players operation #Damage Temp = @s ATK
-    scoreboard players operation #Damage Temp *= #DMGMultiplier Temp
-    scoreboard players operation #Damage Temp /= #1000 Const
+    #scoreboard players operation #Damage Temp *= #DMGMultiplier Temp
+    #scoreboard players operation #Damage Temp /= #1000 Const
 
 # 与ダメージバフで乗算
     scoreboard players set #DMGBonus Temp 1000

@@ -8,10 +8,19 @@
 # エフェクトを適用
     function common:damage/victim/effect/apply
 
-# ステータスを更新しダメージ計算
+# ステータスを更新
     function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
+
+# ダメージ計算
     execute as @n[tag=attacker] run function common:damage/attacker/element/id/get
     function common:damage/victim/calc with storage common: damage
+
+# ノックバック量の計算
+    scoreboard players set @s MotionMagnitude 100
+    scoreboard players operation @s MotionMagnitude -= @s KnockbackRES
+    scoreboard players operation @s MotionMagnitude *= @n[tag=attacker] KnockbackStrength
+    scoreboard players operation @s MotionMagnitude /= #100 Const
+    scoreboard players operation @s MotionMagnitude < #255 Const
 
 # 攻撃したプレイヤーにタグを付与
     $tag @p[tag=attacker] add attacked_$(value)

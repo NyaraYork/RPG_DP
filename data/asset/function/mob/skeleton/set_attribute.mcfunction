@@ -6,6 +6,9 @@
     scoreboard players set @s ATK 23
     scoreboard players set @s DEF 23
 
+    scoreboard players set @s KnockbackStrength 10
+    scoreboard players set @s KnockbackRES 0
+
     scoreboard players set @s CritRate 50
     scoreboard players set @s CritDMG 500
 

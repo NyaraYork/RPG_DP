@@ -14,6 +14,5 @@
     function common:damage/attacker/effect/id/get
 
 # リセット
-    advancement revoke @s only player:trigger/attacked/melee
     tag @s remove attacker
     scoreboard players reset #DMGMultiplier Temp

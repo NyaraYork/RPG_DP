@@ -9,6 +9,7 @@
 
 # スコアボード作成
     scoreboard objectives add EntityID dummy
+    scoreboard objectives add OwnerID dummy
 
     scoreboard objectives add Level dummy
     scoreboard objectives add XP dummy
@@ -21,6 +22,8 @@
     scoreboard objectives add SPD dummy
     scoreboard objectives add CritRate dummy
     scoreboard objectives add CritDMG dummy
+    scoreboard objectives add KnockbackStrength dummy
+    scoreboard objectives add KnockbackRES dummy
 
     scoreboard objectives add PhysicalDMGBonus dummy
     scoreboard objectives add FireDMGBonus dummy
@@ -43,6 +46,7 @@
     scoreboard objectives add LightRES dummy
 
     scoreboard objectives add HPBarLength dummy
+    scoreboard objectives add MotionMagnitude dummy
     scoreboard objectives add SelectedSlotPrev dummy
     scoreboard objectives add SetMaxHPDelay dummy
     scoreboard objectives add DisplayTicks dummy
@@ -54,6 +58,7 @@
 # 定数を定義
     scoreboard players set #10 Const 10
     scoreboard players set #100 Const 100
+    scoreboard players set #255 Const 255
     scoreboard players set #1000 Const 1000
     scoreboard players set #10000 Const 10000
     scoreboard players set #-2147483648 Const -2147483648

@@ -1,0 +1,79 @@
+{
+    "description": "",
+    "supported_items": "minecraft:saddle",
+    "weight": 1,
+    "max_level": 1,
+    "min_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "max_cost": {
+        "base": 0,
+        "per_level_above_first": 0
+    },
+    "anvil_cost": 0,
+    "slots": [
+        "saddle"
+    ],
+    "effects": {
+        "minecraft:tick": [
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "lib:motion/rotation/set"
+                }
+            },
+            {
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        1,
+                        0,
+                        1
+                    ],
+                    "magnitude": {
+                        "type": "minecraft:linear",
+                        "base": 0.0594,
+                        "per_level_above_first": 0.0594
+                    }
+                }
+            },
+            {
+                "effect": {
+                    "type": "minecraft:apply_impulse",
+                    "direction": [
+                        0,
+                        0,
+                        1
+                    ],
+                    "coordinate_scale": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "magnitude": {
+                        "type": "minecraft:clamped",
+                        "value": {
+                            "type": "minecraft:linear",
+                            "base": 0.0594,
+                            "per_level_above_first": 0.0594
+                        },
+                        "min": 0.0594,
+                        "max": 0.594
+                    }
+                }
+            },
+            {
+                "effect": {
+                    "type": "minecraft:run_function",
+                    "function": "lib:motion/rotation/restore"
+                }
+            }
+        ]
+    }
+}

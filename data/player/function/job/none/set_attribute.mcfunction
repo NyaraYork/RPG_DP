@@ -5,3 +5,6 @@
     scoreboard players set @s HPMax 29
     scoreboard players set @s ATK 23
     scoreboard players set @s DEF 23
+
+    scoreboard players set @s KnockbackStrength 10
+    scoreboard players set @s KnockbackRES 0

@@ -6,6 +6,3 @@
 
 # 攻撃された時に発動するエフェクトを取得
     function common:damage/victim/effect/get with storage common: ID
-
-# タグ削除
-    tag @s remove victim
