@@ -7,4 +7,5 @@
 # リセット
     scoreboard players reset @s MotionMagnitude
     item replace entity @s saddle with air
+    data remove storage lib: rotation
     tag @s remove owner
