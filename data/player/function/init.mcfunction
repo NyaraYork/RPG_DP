@@ -5,7 +5,7 @@
     execute store result score @s EntityID run function common:id/get
 
 # プレイヤーにレベルと必要な経験値を設定する
-    function player:attribute/level/calc_xp
+    function player:attribute/xp/calc
 
 # プレイヤーのステータスを設定する
     function player:job/none/set_attribute
