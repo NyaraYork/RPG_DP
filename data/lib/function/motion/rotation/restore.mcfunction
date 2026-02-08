@@ -5,7 +5,6 @@
     execute as @e[type=marker,tag=RotationMarker] if score @s OwnerID = @n[tag=owner] EntityID run function lib:motion/rotation/marker/restore
 
 # リセット
-    scoreboard players reset @s MotionMagnitude
     item replace entity @s saddle with air
     data remove storage lib: rotation
     tag @s remove owner

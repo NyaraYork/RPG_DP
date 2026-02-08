@@ -10,5 +10,6 @@
     stopsound @a hostile entity.horse.saddle
 
 # リセット
+    scoreboard players reset @s MotionMagnitude
     scoreboard players reset #OwnerID Temp
     data remove storage lib: motion
