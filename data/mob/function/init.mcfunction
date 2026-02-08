@@ -1,8 +1,8 @@
 #> mob:init
 # モブの初期化をするコマンド
 
-# エンティティIDと2進数タグを付与
-    function common:id/tag/add
+# エンティティIDを付与
+    execute store result score @s EntityID run function common:id/get
 
 # モブIDを付与
     data modify entity @s data.ID set from storage spawner: data.ID

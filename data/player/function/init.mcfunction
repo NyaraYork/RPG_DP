@@ -1,8 +1,8 @@
 #> player:init
-# プレイヤーが初めてワールドに入った時に実行されるコマンド
-    
-# プレイヤーにIDと2進数タグを付与する
-    function common:id/tag/add
+# プレイヤーの初期化をするコマンド
+
+# プレイヤーにIDを付与する
+    execute store result score @s EntityID run function common:id/get
 
 # プレイヤーにレベルと必要な経験値を設定する
     function player:attribute/level/calc_xp
