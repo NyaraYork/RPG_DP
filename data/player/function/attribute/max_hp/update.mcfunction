@@ -1,4 +1,4 @@
-#> player:attribute/hp/max
+#> player:attribute/max_hp/update
 # プレイヤーの最大HPをHPバーに反映するコマンド
 
 # 最大HPをHPバーに反映
@@ -7,5 +7,4 @@
     function player:attribute/set with storage player: attribute
 
 # リセット
-    scoreboard players reset @s SetMaxHPDelay
     data remove storage player: attribute

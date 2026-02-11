@@ -13,4 +13,4 @@
 
 # プレイヤーのHPをHPバーに反映
     scoreboard players operation @s HP = @s HPMax
-    function player:attribute/hp/value
+    function player:attribute/hp/update
