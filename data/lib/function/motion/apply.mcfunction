@@ -7,7 +7,7 @@
 # モーションを適用
     execute store result storage lib: motion.magnitude int 1 run scoreboard players get @s MotionMagnitude
     $function lib:motion/$(type) with storage lib: motion
-    stopsound @a hostile entity.horse.saddle
+    stopsound @a * entity.horse.saddle
 
 # リセット
     scoreboard players reset @s MotionMagnitude
