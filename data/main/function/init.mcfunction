@@ -5,6 +5,7 @@
     execute in lib:debug run forceload add -1 -1 0 0
 
 # ゲームルールの設定
+    gamerule immediate_respawn true
     gamerule natural_health_regeneration false
     gamerule spawn_mobs false
 
