@@ -11,7 +11,7 @@
 # 召喚するモブの数を設定
     data modify storage lib: random.Min set from storage spawner: data.MinSpawnCount
     data modify storage lib: random.Max set from storage spawner: data.MaxSpawnCount
-    execute store result score #SpawnCount Temp run function lib:random with storage lib: random
+    execute store result score #SpawnCount Temp run function lib:math/random with storage lib: random
 
 # プレイヤーの平均レベルを計算
     scoreboard players operation #PlayerLevelAverage Temp += @a Level

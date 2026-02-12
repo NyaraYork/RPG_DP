@@ -5,7 +5,7 @@
     data modify storage spawner: data.SpawnPotentialsBuf set from storage spawner: data.SpawnPotentials
     data modify storage lib: random.Min set value 1
     execute store result storage lib: random.Max int 1 run scoreboard players get #WeightSum Temp
-    execute store result score #Target Temp run function lib:random with storage lib: random
+    execute store result score #Target Temp run function lib:math/random with storage lib: random
     function spawner:spawn/mob/select
 
 # 召喚するモブのレベルを決定
@@ -21,8 +21,8 @@
 # 召喚する座標を決定
     execute store result storage lib: random.Min int -1 run data get storage spawner: data.SpawnRange
     execute store result storage lib: random.Max int 1 run data get storage spawner: data.SpawnRange
-    execute store result score #SpreadPosX Temp run function lib:random with storage lib: random
-    execute store result score #SpreadPosZ Temp run function lib:random with storage lib: random
+    execute store result score #SpreadPosX Temp run function lib:math/random with storage lib: random
+    execute store result score #SpreadPosZ Temp run function lib:math/random with storage lib: random
     execute store result storage spawner: data.SpawnPosX int 1 run scoreboard players operation #SpreadPosX Temp += #SpawnerPosX Temp
     execute store result storage spawner: data.SpawnPosZ int 1 run scoreboard players operation #SpreadPosZ Temp += #SpawnerPosZ Temp
     function spawner:spawn/mob/spread with storage spawner: data
