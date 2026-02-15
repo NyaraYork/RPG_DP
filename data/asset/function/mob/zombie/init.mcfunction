@@ -7,10 +7,6 @@
 # モブ共通の初期化処理
     function mob:init
 
-# ダメージ耐性とノックバック耐性を付与
-    effect give @s minecraft:resistance infinite 255 true
-    attribute @s minecraft:knockback_resistance base set 1.0
-
 # ゾンビのレベルとHPバーの表示を初期化
     tag @s add vehicle
     execute summon text_display run function mob:attribute/level/display

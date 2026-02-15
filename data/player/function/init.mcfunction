@@ -4,6 +4,9 @@
 # プレイヤーにIDを付与する
     execute store result score @s EntityID run function common:id/get
 
+# オーナーIDを付与
+    scoreboard players operation @s OwnerID = @s EntityID
+
 # プレイヤーにレベルと必要な経験値を設定する
     function player:attribute/xp/calc
 
