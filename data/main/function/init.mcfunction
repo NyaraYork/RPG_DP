@@ -48,7 +48,6 @@
     scoreboard objectives add LightRES dummy
 
     scoreboard objectives add HPBarLength dummy
-    scoreboard objectives add MotionMagnitude dummy
     scoreboard objectives add SelectedSlotPrev dummy
     scoreboard objectives add DisplayTicks dummy
 

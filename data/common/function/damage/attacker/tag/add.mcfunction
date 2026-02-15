@@ -5,11 +5,8 @@
     tag @s add attacker
 
 # 攻撃したエンティティのIDを取得
-    function common:damage/attacker/effect/id/get
-
-# 攻撃されたエンティティをノックバックさせる
-    execute as @e[tag=victim] run function lib:motion/apply {type:"knockback"}
+    data modify storage lib: motion.type set value "knockback"
+    execute rotated ~ -47.685 run function common:damage/attacker/effect/id/get
 
 # タグ削除
     tag @s remove attacker
-    tag @e[tag=victim] remove victim

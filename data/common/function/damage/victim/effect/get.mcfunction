@@ -16,11 +16,10 @@
     function common:damage/victim/calc with storage common: damage
 
 # ノックバック量の計算
-    scoreboard players set @s MotionMagnitude 100
-    scoreboard players operation @s MotionMagnitude -= @s KnockbackRES
-    scoreboard players operation @s MotionMagnitude *= @n[tag=attacker] KnockbackStrength
-    scoreboard players operation @s MotionMagnitude /= #100 Const
-    scoreboard players operation @s MotionMagnitude < #255 Const
+    scoreboard players set #MotionMagnitude Temp 100
+    scoreboard players operation #MotionMagnitude Temp -= @s KnockbackRES
+    scoreboard players operation #MotionMagnitude Temp *= @n[tag=attacker] KnockbackStrength
+    scoreboard players operation #MotionMagnitude Temp /= #100 Const
 
 # 攻撃したプレイヤーにタグを付与
     $tag @p[tag=attacker] add attacked_$(value)
