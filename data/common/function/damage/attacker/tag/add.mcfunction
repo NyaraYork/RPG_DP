@@ -8,5 +8,6 @@
     data modify storage lib: motion.type set value "knockback"
     execute rotated ~ -47.685 run function common:damage/attacker/effect/id/get
 
-# タグ削除
+# リセット
     tag @s remove attacker
+    data remove storage lib: motion

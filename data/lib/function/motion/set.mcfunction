@@ -10,7 +10,6 @@
     function lib:motion/apply with storage lib: motion
     stopsound @a * entity.horse.saddle
 
-# リセット
+# スコアリセット
     scoreboard players reset #MotionMagnitude Temp
     scoreboard players reset #OwnerID Temp
-    data remove storage lib: motion
