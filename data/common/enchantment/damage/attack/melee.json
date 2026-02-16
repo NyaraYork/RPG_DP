@@ -24,14 +24,14 @@
                 },
                 "enchanted": "attacker",
                 "affected": "victim"
-            },
+            }
+        ],
+        "minecraft:post_piercing_attack": [
             {
                 "effect": {
                     "type": "minecraft:run_function",
                     "function": "common:damage/attacker/tag/add"
-                },
-                "enchanted": "attacker",
-                "affected": "attacker"
+                }
             }
         ]
     }
