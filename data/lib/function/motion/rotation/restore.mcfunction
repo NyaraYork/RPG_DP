@@ -2,9 +2,8 @@
 # エンティティの向きを元に戻すコマンド
 
 # エンティティの向きを元に戻す
-    execute as @e[type=marker,tag=RotationMarker] if score @s OwnerID = @n[tag=owner] EntityID run function lib:motion/rotation/marker/restore
+    execute as @e[type=marker,tag=RotationMarker] if score @s OwnerID = @n[tag=owner] EntityID at @s run function lib:motion/rotation/marker/restore
 
 # リセット
     item replace entity @s saddle with air
-    data remove storage lib: rotation
     tag @s remove owner
