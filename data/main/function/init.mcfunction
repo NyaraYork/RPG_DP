@@ -1,6 +1,9 @@
 #> main:init
 # ワールドの初期化をするコマンド
 
+# バージョン名を保存
+    data modify storage main: version set value "v0.1.0"
+
 # 常時読み込まれるチャンクを設定
     execute in lib:debug run forceload add -1 -1 0 0
 
@@ -62,6 +65,3 @@
     scoreboard players set #1000 Const 1000
     scoreboard players set #10000 Const 10000
     scoreboard players set #-2147483648 Const -2147483648
-
-# ワールドの初期化が完了したか否かを決定
-    return 0
