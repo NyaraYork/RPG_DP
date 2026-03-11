@@ -1,6 +1,9 @@
 #> main:tick
 # 毎ティック実行するコマンド
 
+# 経験値オーブをキル
+    kill @e[type=experience_orb]
+
 # エフェクト
     function common:effect/tick
 
