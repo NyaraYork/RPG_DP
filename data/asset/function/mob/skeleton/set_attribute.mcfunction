@@ -32,7 +32,8 @@
     scoreboard players set @s DarkRES 0
     scoreboard players set @s LightRES 0
 
-    scoreboard players set @s HPBarLength 30
-
 # 獲得基礎経験値量を設定
     scoreboard players set @s XPGrant 500
+
+# HPバーの長さを設定
+    scoreboard players set @s HPBarLength 30

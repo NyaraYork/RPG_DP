@@ -2,8 +2,8 @@
 # プレイヤーに与える経験値を計算するコマンド
 
 # プレイヤーに与える経験値を計算
-    scoreboard players operation @s XPGrant *= @s Level
     scoreboard players operation #GrantXP Temp = @s XPGrant
+    scoreboard players operation #GrantXP Temp *= @s Level
     $execute store result score #AttackedPlayerCount Temp if entity @a[tag=attacked_$(value),scores={Level=1..99}]
     scoreboard players operation #GrantXP Temp /= #AttackedPlayerCount Temp
 
