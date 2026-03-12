@@ -1,12 +1,15 @@
 #> player:attribute/xp/grant
 # プレイヤーに経験値を与えるコマンド
 
+# プレイヤーに経験値を与える
+    scoreboard players operation #GrantXP Temp /= @s Level
+    scoreboard players operation @s XP += #GrantXP Temp
+
 # 経験値獲得演出
     tellraw @s [{text:"+",color:"yellow"},{score:{name:"#GrantXP",objective:"Temp"}},{text:"経験値獲得",color:"white"}]
     playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 
-# プレイヤーに経験値を与えレベルアップ判定
-    scoreboard players operation @s XP += #GrantXP Temp
+# レベルアップ判定
     execute if score @s XP >= @s XPRequired run function player:attribute/level/up
 
 # 経験値の進行度を計算

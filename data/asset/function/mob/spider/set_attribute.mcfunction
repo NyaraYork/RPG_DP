@@ -33,3 +33,6 @@
     scoreboard players set @s LightRES 0
 
     scoreboard players set @s HPBarLength 50
+
+# 獲得基礎経験値量を設定
+    scoreboard players set @s XPGrant 500
