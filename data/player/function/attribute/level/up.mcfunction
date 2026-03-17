@@ -5,8 +5,7 @@
     function player:attribute/xp/calc
 
 # ステータス更新
-    execute store result storage common: ID.value int 1 run scoreboard players get @s EntityID
-    function player:effect/attribute/get with storage common: ID
+    function player:effect/attribute/get with storage common: AttackerID
     function player:attribute/update
 
 # レベルアップ演出

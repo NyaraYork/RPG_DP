@@ -18,6 +18,8 @@
 
 # リセット
     data remove storage common: EffectsBuf
+    data remove storage common: ID
+    data remove storage common: VictimID
     data remove storage common: damage
     scoreboard players reset #Damage Temp
     scoreboard players reset #DMGBonus Temp

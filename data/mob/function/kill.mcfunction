@@ -5,8 +5,7 @@
     $function asset:mob/$(ID)/kill
 
 # プレイヤーに与える経験値を計算
-    execute store result storage common: ID.value int 1 run scoreboard players get @s EntityID
-    function mob:attribute/grant_xp/calc with storage common: ID
+    function mob:attribute/grant_xp/calc with storage common: VictimID
 
 # キル
     kill @s
