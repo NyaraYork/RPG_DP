@@ -27,6 +27,9 @@
 # ダメージを与える
     function common:damage/deal
 
+# ノックバック
+    execute if score @s HP matches 1.. run function lib:motion/set
+
 # エフェクトの付与対象を削除
     $data modify storage common: UpdatedEntities prepend from storage common: effects[{owner:$(value),trigger:"hurt"}].target.ID[]
     $data remove storage common: effects[{owner:$(value),trigger:"hurt"}].target.ID
