@@ -8,6 +8,10 @@
 # エフェクトを適用
     function common:damage/attacker/effect/apply
 
+# 攻撃したエンティティの属性を取得
+    data modify storage common: damage.element set value "Physical"
+    $data modify storage common: damage.element set from storage common: effects[{owner:$(value),type:"set_element"}].element
+
 # 攻撃されたエンティティのIDを取得
     execute as @e[tag=victim] positioned as @s run function common:damage/victim/effect/id/get
 

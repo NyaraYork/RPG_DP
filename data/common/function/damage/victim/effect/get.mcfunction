@@ -12,7 +12,6 @@
     function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
 
 # ダメージ計算
-    function common:damage/attacker/element/get with storage common: AttackerID
     execute as @n[tag=attacker] run function common:damage/attacker/calc with storage common: damage
     function common:damage/victim/calc with storage common: damage
 
