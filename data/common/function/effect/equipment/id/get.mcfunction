@@ -6,3 +6,6 @@
 
 # 装備品のエフェクトを取得
     function common:effect/equipment/get with storage common: ID
+
+# ストレージ削除
+    data remove storage common: ID
