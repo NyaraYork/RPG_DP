@@ -5,9 +5,13 @@
     function player:attribute/xp/calc
 
 # ステータス更新
-    function player:effect/attribute/get with storage common: AttackerID
+    execute store result storage common: KillerID.value int 1 run scoreboard players get @s EntityID
+    function player:effect/attribute/get with storage common: KillerID
     function player:attribute/update
 
 # レベルアップ演出
     tellraw @s [{text:"レベルが",color:"green"},{score:{name:"@s",objective:"Level"}},{text:"に上がった！"}]
     playsound entity.player.levelup player @s ~ ~ ~ 1 1
+
+# ストレージ削除
+    data remove storage common: KillerID
