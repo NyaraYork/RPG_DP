@@ -2,7 +2,7 @@
 # 装備品のエフェクトを取得するコマンド
 
 # 装備品でslotタグが指定されているエフェクトを取得
-    data modify storage common: equipment set from entity @s equipment
+    data modify storage common: equipment merge from entity @s equipment
     data modify storage common: EffectsBuf append from storage common: equipment.mainhand.components."minecraft:custom_data".effects[{slot:"mainhand"}]
     data modify storage common: EffectsBuf append from storage common: equipment.mainhand.components."minecraft:custom_data".effects[{slot:"hand"}]
     data modify storage common: EffectsBuf append from storage common: equipment.mainhand.components."minecraft:custom_data".effects[{slot:"any"}]
