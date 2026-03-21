@@ -9,6 +9,8 @@
     scoreboard players set @s CritRate 50
     scoreboard players set @s CritDMG 500
 
+    scoreboard players set @s Shield 0
+
     scoreboard players set @s KnockbackStrength 10
     scoreboard players set @s KnockbackRES 0
 

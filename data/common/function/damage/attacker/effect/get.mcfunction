@@ -30,4 +30,5 @@
     scoreboard players reset #CritDMG Temp
     scoreboard players reset #CritChance Temp
     scoreboard players reset #RES Temp
+    scoreboard players reset #ShieldDurability Temp
     scoreboard players reset #HPRatio Temp
