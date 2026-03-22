@@ -1,5 +1,5 @@
-#> common:damage/indicator/tick
-# ダメージ表示エンティティに常時実行するコマンド
+#> indicator:tick
+# インジケーターに常時実行するコマンド
 
 # 残り表示ティック数が0の場合キル
     kill @s[scores={DisplayTicks=0}]
