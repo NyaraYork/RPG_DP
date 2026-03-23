@@ -54,6 +54,7 @@
 
     scoreboard objectives add HPBarLength dummy
     scoreboard objectives add SelectedSlotPrev dummy
+    scoreboard objectives add ExecutionDelay dummy
     scoreboard objectives add DisplayTicks dummy
 
     scoreboard objectives add Temp dummy

@@ -12,9 +12,9 @@
     function player:attribute/set with storage player: attribute
     effect give @s instant_health 1 252 true
 
-# 2ティック後に最大HPを反映
-    data modify storage common: EffectsBuf set value [{type:"update_hp",stack:1,name:"UpdateHP",duration:2,trigger:"tick",target:{predicate:{type:"owner"}}}]
-    function common:effect/owner/add
+# 2ティック後にHPバーを元に戻す
+    tag @s add RestoreHP
+    scoreboard players set @s ExecutionDelay 2
 
 # リセット
     scoreboard players reset #HPRatio Temp
