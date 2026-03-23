@@ -28,6 +28,7 @@
     scoreboard objectives add CritRate dummy
     scoreboard objectives add CritDMG dummy
     scoreboard objectives add Shield dummy
+    scoreboard objectives add HealingCurse dummy
     scoreboard objectives add KnockbackStrength dummy
     scoreboard objectives add KnockbackRES dummy
 

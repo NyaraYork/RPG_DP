@@ -7,3 +7,6 @@
 # ダメージ演出
     execute if entity @s[type=player] run return run function player:hurt
     function mob:hurt with entity @s data
+
+# スコアリセット
+    scoreboard players reset #Damage Temp

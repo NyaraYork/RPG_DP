@@ -25,7 +25,6 @@
     data remove storage common: ID
     data remove storage common: VictimID
     data remove storage common: damage
-    scoreboard players reset #Damage Temp
     scoreboard players reset #DMGBonus Temp
     scoreboard players reset #CritDMG Temp
     scoreboard players reset #CritChance Temp
