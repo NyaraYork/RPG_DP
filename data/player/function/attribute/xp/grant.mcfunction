@@ -10,7 +10,7 @@
     playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 
 # レベルアップ判定
-    execute if score @s XP >= @s XPRequired run function player:attribute/level/up
+    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run function player:attribute/level/up
 
 # 経験値の進行度を計算
     execute if score @s Level matches 1..99 run scoreboard players set #XPProgress Temp 1000
