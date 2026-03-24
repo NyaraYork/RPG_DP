@@ -2,4 +2,4 @@
 # エフェクトを適用するコマンド
 
 # エフェクトを適用
-    $function asset:effect/$(type)/apply
+    $execute at @s run function asset:effect/$(type)/apply
