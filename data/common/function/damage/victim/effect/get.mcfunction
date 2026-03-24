@@ -24,8 +24,8 @@
 # 攻撃したプレイヤーにタグを付与
     $tag @p[tag=attacker] add attacked_$(value)
 
-# ダメージをシールドで吸収
-    function asset:effect/shield/absorb with storage common: VictimID
+# ダメージを吸収するエンティティのIDを取得
+    function asset:effect/shield/id/get
 
 # ノックバック
     execute if score @s HP matches 1.. run function lib:motion/set

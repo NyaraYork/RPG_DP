@@ -5,8 +5,8 @@
     function player:attribute/xp/calc
 
 # ステータス更新
-    execute store result storage common: KillerID.value int 1 run scoreboard players get @s EntityID
-    function player:effect/attribute/get with storage common: KillerID
+    execute store result storage common: ID.value int 1 run scoreboard players get @s EntityID
+    function player:effect/attribute/get with storage common: ID
     function player:attribute/update
 
 # レベルアップ演出
@@ -14,4 +14,4 @@
     playsound entity.player.levelup player @s ~ ~ ~ 1 1
 
 # ストレージ削除
-    data remove storage common: KillerID
+    data remove storage common: ID
