@@ -8,7 +8,7 @@
     execute if score #MaxSpawnableLevel Temp matches 1.. if score @p[gamemode=!spectator] Level > #MaxSpawnableLevel Temp run return run function spawner:spawn/potential/remove
 
 # 時刻が指定の範囲内でなければその要素を削除
-    execute store result score #DayTime Temp run time query daytime
+    execute store result score #DayTime Temp run time query minecraft:day
     execute store result score #MinSpawnableTime Temp run data get storage spawner: data.SpawnPotentialsBuf[-1].Requirements.MinSpawnableTime
     execute store result score #MaxSpawnableTime Temp run data get storage spawner: data.SpawnPotentialsBuf[-1].Requirements.MaxSpawnableTime
     execute if score #MinSpawnableTime Temp matches 1.. if score #DayTime Temp < #MinSpawnableTime Temp run return run function spawner:spawn/potential/remove
