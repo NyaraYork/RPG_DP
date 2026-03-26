@@ -5,7 +5,7 @@
     data modify storage main: version set value "v0.1.0"
 
 # 常時読み込まれるチャンクを設定
-    execute in lib:debug run forceload add -1 -1 0 0
+    execute in lib:void run forceload add 0 0
 
 # ゲームルールの設定
     gamerule immediate_respawn true
