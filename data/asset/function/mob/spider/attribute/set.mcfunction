@@ -1,7 +1,7 @@
-#> asset:mob/skeleton/set_attribute
-# スケルトンの基礎ステータスを設定するコマンド
+#> asset:mob/spider/attribute/set
+# クモの基礎ステータスを設定するコマンド
 
-# スケルトンの基礎ステータスを設定
+# クモの基礎ステータスを設定
     scoreboard players set @s HPMax 29
     scoreboard players set @s ATK 23
     scoreboard players set @s DEF 23
@@ -39,4 +39,4 @@
     scoreboard players set @s XPGrant 500
 
 # HPバーの長さを設定
-    scoreboard players set @s HPBarLength 30
+    scoreboard players set @s HPBarLength 50

@@ -14,7 +14,7 @@
     xp set @s 1 levels
 
 # ステータスを設定
-    function player:job/none/set_attribute
+    function player:job/none/attribute/set
     function common:attribute/calc
 
 # プレイヤーのHPをHPバーに反映

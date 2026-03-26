@@ -1,7 +1,7 @@
-#> asset:mob/creeper/set_attribute
-# クリーパーの基礎ステータスを設定するコマンド
+#> player:job/none/attribute/set
+# 無職のプレイヤーの基礎ステータスを設定するコマンド
 
-# クリーパーの基礎ステータスを設定
+# 無職の基礎ステータスを設定
     scoreboard players set @s HPMax 29
     scoreboard players set @s ATK 23
     scoreboard players set @s DEF 23
@@ -34,9 +34,3 @@
     scoreboard players set @s IceRES 0
     scoreboard players set @s DarkRES 0
     scoreboard players set @s LightRES 0
-
-# 獲得基礎経験値量を設定
-    scoreboard players set @s XPGrant 500
-
-# HPバーの長さを設定
-    scoreboard players set @s HPBarLength 30
