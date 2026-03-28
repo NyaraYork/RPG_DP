@@ -18,9 +18,9 @@
     scoreboard players operation #HPRatio Temp /= @s HPBarLength
 
 # テキストディスプレイにHPバーを表示
-    execute if score #HPRatio Temp matches 51.. on passengers run data modify entity @s[tag=HPBar] text set value {color:"dark_green",font:"mob:hp_bar",nbt:"HPBar[]",storage:"mob:"}
-    execute if score #HPRatio Temp matches 26..50 on passengers run data modify entity @s[tag=HPBar] text set value {color:"gold",font:"mob:hp_bar",nbt:"HPBar[]",storage:"mob:"}
-    execute if score #HPRatio Temp matches ..25 on passengers run data modify entity @s[tag=HPBar] text set value {color:"dark_red",font:"mob:hp_bar",nbt:"HPBar[]",storage:"mob:"}
+    execute if score #HPRatio Temp matches 51.. on passengers run data modify entity @s[tag=HPBar] text set value {color:"dark_green",font:"mob:hp_bar",plain:true,nbt:"HPBar[]",storage:"mob:"}
+    execute if score #HPRatio Temp matches 26..50 on passengers run data modify entity @s[tag=HPBar] text set value {color:"gold",font:"mob:hp_bar",plain:true,nbt:"HPBar[]",storage:"mob:"}
+    execute if score #HPRatio Temp matches ..25 on passengers run data modify entity @s[tag=HPBar] text set value {color:"dark_red",font:"mob:hp_bar",plain:true,nbt:"HPBar[]",storage:"mob:"}
 
 # リセット
     data remove storage mob: HPBar
