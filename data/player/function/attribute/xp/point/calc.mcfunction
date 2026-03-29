@@ -1,4 +1,4 @@
-#> player:attribute/xp/calc
+#> player:attribute/xp/point/calc
 # 必要経験値量を計算するコマンド
 
 # レベルアップ
@@ -15,4 +15,4 @@
     scoreboard players add @s XPRequired 143
 
 # 獲得した経験値が必要な経験値を下回るまで再帰
-    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run function player:attribute/xp/calc
+    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run function player:attribute/xp/point/calc

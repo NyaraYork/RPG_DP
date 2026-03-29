@@ -1,4 +1,4 @@
-#> player:attribute/hp/update
+#> player:display/attribute/hp/value/update
 # プレイヤーの現在HPをHPバーに反映するコマンド
 
 # HP割合を計算
@@ -12,7 +12,7 @@
     function player:attribute/set with storage player: attribute
     effect give @s instant_health 1 252 true
 
-# 2ティック後にHPバーを元に戻す
+# 2ティック後にHPバーの長さを設定
     tag @s add RestoreHP
     scoreboard players set @s ExecutionDelay 2
 

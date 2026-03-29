@@ -1,5 +1,5 @@
-#> mob:attribute/level/display
-# モブのレベルを表示するコマンド
+#> mob:display/attribute/xp/level/init
+# モブのレベル表示を初期化するコマンド
 
 # レベルを表示するテキストをモブの頭上に乗せる
     ride @s mount @n[tag=vehicle]

@@ -1,4 +1,4 @@
-#> mob:attribute/hp/update
+#> mob:display/attribute/hp/update
 # モブのHPバーを更新するコマンド
 
 # HP割合を計算
@@ -7,7 +7,7 @@
     scoreboard players operation #HPRatio Temp /= @s HPMax
 
 # モブのHPバー表示に必要なデータを設定
-    function mob:attribute/hp/set_data
+    function mob:display/attribute/set_data
 
 # HPバーの両端に枠を入れる
     data modify storage mob: HPBar prepend value 2

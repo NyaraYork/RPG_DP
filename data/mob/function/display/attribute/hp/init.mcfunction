@@ -1,4 +1,4 @@
-#> mob:attribute/hp/init
+#> mob:display/attribute/hp/init
 # モブのHPバーを初期化するコマンド
 
 # HPバーをモブの頭上に乗せる

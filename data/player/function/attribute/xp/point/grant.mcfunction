@@ -1,4 +1,4 @@
-#> player:attribute/xp/grant
+#> player:attribute/xp/point/grant
 # プレイヤーに経験値を与えるコマンド
 
 # プレイヤーに経験値を与える
@@ -10,7 +10,7 @@
     playsound entity.experience_orb.pickup player @s ~ ~ ~ 1 1
 
 # レベルアップ判定
-    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run function player:attribute/level/up
+    execute if score @s Level matches 1..99 if score @s XP >= @s XPRequired run function player:attribute/xp/level/up
 
 # 経験値の進行度を計算
     execute if score @s Level matches 1..99 run scoreboard players set #XPProgress Temp 1000
@@ -21,7 +21,7 @@
     execute store result storage player: xp.point int 1 run scoreboard players get #XPProgress Temp
     execute store result storage player: xp.level int 1 run scoreboard players get @s Level
     xp set @s 129 levels
-    function player:attribute/xp/update with storage player: xp
+    function player:display/attribute/xp/update with storage player: xp
 
 # リセット
     scoreboard players reset #XPProgress Temp

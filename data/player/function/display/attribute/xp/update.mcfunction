@@ -1,4 +1,4 @@
-#> player:attribute/xp/update
+#> player:display/attribute/xp/update
 # プレイヤーの経験値バーを更新するコマンド
 
 # 進行度

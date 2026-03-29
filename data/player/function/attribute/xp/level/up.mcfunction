@@ -1,8 +1,8 @@
-#> player:attribute/level/up
+#> player:attribute/xp/level/up
 # プレイヤーをレベルアップさせるコマンド
 
 # 必要経験値量を計算
-    function player:attribute/xp/calc
+    function player:attribute/xp/point/calc
 
 # ステータス更新
     execute store result storage common: ID.value int 1 run scoreboard players get @s EntityID

@@ -8,4 +8,4 @@
     function common:attribute/calc
 
 # HPバーに反映
-    function player:attribute/hp/update
+    function player:display/attribute/hp/value/update

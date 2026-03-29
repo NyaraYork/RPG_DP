@@ -9,8 +9,8 @@
 
 # クリーパーのレベルとHPバーの表示を初期化
     tag @s add vehicle
-    execute summon text_display run function mob:attribute/level/display
-    execute summon text_display run function mob:attribute/hp/init
+    execute summon text_display run function mob:display/attribute/xp/level/init
+    execute summon text_display run function mob:display/attribute/hp/init
 
 # レベルの表示位置をずらす
     execute on passengers run data modify entity @s[tag=LevelDisplay] transformation.translation[1] set value 0.2f
