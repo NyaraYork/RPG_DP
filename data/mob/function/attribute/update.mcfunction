@@ -6,3 +6,9 @@
 
 # ステータス補正値を適用
     function common:attribute/calc
+
+# ステータス表示を更新
+    $function asset:mob/$(ID)/display/attribute/update
+
+# スコアリセット
+    scoreboard players reset #Ratio Temp

@@ -7,10 +7,12 @@
 # モブ共通の初期化処理
     function mob:init
 
-# スケルトンのレベルとHPバーの表示を初期化
+# スケルトンのステータス表示を初期化
     tag @s add vehicle
     execute summon text_display run function mob:display/attribute/xp/level/init
     execute summon text_display run function mob:display/attribute/hp/init
+    execute summon text_display run function mob:display/attribute/shield/init
+    execute summon text_display run function mob:display/attribute/healing_curse/init
 
 # レベルの表示位置をずらす
     execute on passengers run data modify entity @s[tag=LevelDisplay] transformation.translation[1] set value 0.2f
