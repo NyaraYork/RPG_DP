@@ -8,7 +8,7 @@
 
 # エフェクトの効果を適用する
     data modify storage common: trigger set from storage common: EffectsBuf[-1].trigger
-    execute if data storage common: {trigger:"applied"} unless data storage common: EffectsBuf[-1].target.NextID run function common:effect/trigger/applied
+    execute if data storage common: {trigger:"applied"} run function common:effect/trigger/applied
 
 # 更新後の付与対象のIDを更新前の付与対象のIDに移動
     data modify storage common: EffectsBuf[-1].target.ID set from storage common: EffectsBuf[-1].target.NextID

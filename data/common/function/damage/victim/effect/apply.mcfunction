@@ -2,7 +2,7 @@
 # 攻撃された時に発動するエフェクトを適用するコマンド
 
 # エフェクトを適用
-    execute unless data storage common: EffectsBuf[-1].target.NextID run function common:effect/trigger/hurt
+    function common:effect/trigger/hurt
     data modify storage common: EffectsBuf[-1].target.ID set from storage common: EffectsBuf[-1].target.NextID
     data remove storage common: EffectsBuf[-1].target.NextID
 
