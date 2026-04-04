@@ -8,6 +8,9 @@
 # エフェクトを適用
     function common:damage/victim/effect/apply
 
+# 新たにエフェクトを付与
+    function common:effect/buffer/add with storage common: ApplyEffectsBuf[-1]
+
 # ステータスを更新
     function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
 

@@ -10,6 +10,9 @@
     data modify storage common: UpdatedEntities prepend from storage common: effects[{duration:0}].target.ID[]
     data remove storage common: effects[{duration:0}]
 
+# 新たにエフェクトを付与
+    function common:effect/buffer/add with storage common: ApplyEffectsBuf[-1]
+
 # エンティティ更新リストに格納されているIDのエンティティのステータスを取得
     function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
 

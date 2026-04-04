@@ -1,17 +1,11 @@
 #> common:effect/owner/add
-# エフェクトに主のIDを付与するコマンド
+# 付与するエフェクトに実行者のIDを格納するコマンド
 
-# エフェクトに主のIDを付与
-    execute store result storage common: EffectsBuf[].owner int 1 run scoreboard players get @s EntityID
+# 付与するエフェクトに実行者のIDを格納
+    execute store result storage common: ApplyEffects[].owner int 1 run scoreboard players get @s EntityID
 
-# エフェクトを付与
-    function common:effect/add with storage common: EffectsBuf[-1]
+# 付与するエフェクトのリストに格納
+    data modify storage common: ApplyEffectsBuf prepend from storage common: ApplyEffects[]
 
-# エフェクトの付与対象のステータスを更新
-    function common:effect/target/attribute/get with storage common: UpdatedEntities[-1]
-
-# リセット
-    data remove storage common: EffectsBuf
-    data remove storage common: RemoveStack
-    data remove storage common: trigger
-    scoreboard players reset #Stack Temp
+# 付与するエフェクトを削除
+    data remove storage common: ApplyEffects
