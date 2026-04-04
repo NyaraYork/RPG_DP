@@ -2,7 +2,7 @@
 # プレイヤーにダメージを与えるコマンド
 
 # ダメージ演出
-    damage @s 0.0
+    damage @s 1
     execute anchored eyes positioned ^ ^ ^ positioned ~ ~0.4 ~ summon text_display run function indicator:damage/init
 
 # HPが0以下の場合キル
