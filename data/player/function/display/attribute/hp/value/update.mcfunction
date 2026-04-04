@@ -13,8 +13,8 @@
     effect give @s instant_health 1 252 true
 
 # 2ティック後にHPバーの長さを設定
-    tag @s add RestoreHP
-    scoreboard players set @s ExecutionDelay 2
+    data modify storage common: ApplyEffects set value [{type:".delay/restore_hp",stack:1,name:"RestoreHP",duration:1,trigger:"tick",target:{predicate:{type:"owner"}}}]
+    function common:effect/owner/add
 
 # リセット
     scoreboard players reset #HPRatio Temp
