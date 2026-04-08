@@ -65,5 +65,3 @@
     scoreboard players set #100 Const 100
     scoreboard players set #255 Const 255
     scoreboard players set #1000 Const 1000
-    scoreboard players set #10000 Const 10000
-    scoreboard players set #-2147483648 Const -2147483648
