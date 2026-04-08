@@ -62,6 +62,7 @@
 
 # 定数を定義
     scoreboard players set #10 Const 10
+    scoreboard players set #20 Const 20
     scoreboard players set #100 Const 100
     scoreboard players set #255 Const 255
     scoreboard players set #1000 Const 1000
