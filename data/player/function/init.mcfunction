@@ -19,7 +19,7 @@
 
 # プレイヤーのHPをHPバーに反映
     scoreboard players operation @s HP = @s HPMax
-    function player:display/attribute/hp/value/update
+    function player:display/attribute/hp/bar/update
 
 # ダメージ耐性とノックバック耐性を付与
     effect give @s minecraft:resistance infinite 255 true

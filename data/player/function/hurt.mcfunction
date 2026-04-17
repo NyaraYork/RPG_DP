@@ -9,4 +9,4 @@
     execute if score @s HP matches ..0 run function player:kill
 
 # HPバーに反映
-    function player:display/attribute/hp/value/update
+    function player:display/attribute/hp/bar/update

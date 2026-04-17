@@ -1,4 +1,4 @@
-#> player:display/attribute/hp/value/update
+#> player:display/attribute/hp/bar/update
 # プレイヤーの現在HPをHPバーに反映するコマンド
 
 # HP割合を計算
