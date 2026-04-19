@@ -2,7 +2,7 @@
 # ワールドの初期化をするコマンド
 
 # バージョン名を保存
-    data modify storage main: version set value "v0.1.0"
+    data modify storage main: version set value "v0.2.0"
 
 # 常時読み込まれるチャンクを設定
     execute in lib:void run forceload add 0 0
