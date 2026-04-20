@@ -26,7 +26,7 @@
     function player:display/attribute/healing_curse/bar/add
 
 # ステータス表示
-    title @s actionbar ["",{text:"\uF080",font:"lib:space"},{interpret:true,nbt:"shield[]",storage:"player:",separator:""},{interpret:true,nbt:"hp[]",storage:"player:",separator:""},{plain:true,shadow_color:0,font:"player:display/attribute/healing_curse",nbt:"HealingCurse[]",storage:"player:",separator:{text:"\uF002",font:"lib:space"}},{text:"\uE008\uE001",font:"lib:space"},{interpret:true,nbt:"NegativeSpace[]",storage:"player:",separator:""},{interpret:true,shadow_color:0,nbt:"DisplayEffects[]",storage:"player:",separator:""},{interpret:true,nbt:"NegativeSpace[]",storage:"player:",separator:""},{text:"\uE008\uE004",font:"lib:space"}]
+    title @s actionbar ["",{text:"\uF080\uF008\uF004",font:"lib:space"},{interpret:true,nbt:"shield[]",storage:"player:",separator:""},{interpret:true,nbt:"hp[]",storage:"player:",separator:""},{plain:true,shadow_color:0,font:"player:display/attribute/healing_curse",nbt:"HealingCurse[]",storage:"player:",separator:{text:"\uF002",font:"lib:space"}},{text:"\uE008\uE001",font:"lib:space"},{interpret:true,nbt:"NegativeSpace[]",storage:"player:",separator:""},{interpret:true,shadow_color:0,nbt:"DisplayEffects[]",storage:"player:",separator:""},{interpret:true,nbt:"NegativeSpace[]",storage:"player:",separator:""}]
 
 # ダメージ耐性付与
     effect give @s resistance 1 255 true
