@@ -22,6 +22,8 @@
     scoreboard objectives add XPGrant dummy
     scoreboard objectives add HP dummy
     scoreboard objectives add HPMax dummy
+    scoreboard objectives add MP dummy
+    scoreboard objectives add MPMax dummy
     scoreboard objectives add ATK dummy
     scoreboard objectives add DEF dummy
     scoreboard objectives add SPD dummy

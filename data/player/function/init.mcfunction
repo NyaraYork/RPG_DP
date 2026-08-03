@@ -15,10 +15,12 @@
 
 # ステータスを設定
     function player:job/none/attribute/set
+    scoreboard players operation @s MPMax *= @s Level
     function common:attribute/calc
+    scoreboard players operation @s HP = @s HPMax
+    scoreboard players operation @s MP = @s MPMax
 
 # プレイヤーのHPをHPバーに反映
-    scoreboard players operation @s HP = @s HPMax
     function player:display/attribute/hp/bar/update
 
 # ダメージ耐性とノックバック耐性を付与

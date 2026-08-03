@@ -5,6 +5,7 @@
     execute if entity @s[team=] run function player:job/none/attribute/set
 
 # エフェクトのステータスを反映
+    scoreboard players operation @s MPMax *= @s Level
     function common:attribute/calc
 
 # HPバーに反映

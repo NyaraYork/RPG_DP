@@ -9,4 +9,7 @@
     execute if score #Count Temp > #HealingCurse Temp run data modify storage player: HealingCurse prepend value 0
 
 # 10回実行するまで再帰
-    execute if score #Count Temp matches ..9 run function player:display/attribute/healing_curse/bar/add
+    execute if score #Count Temp matches ..9 run return run function player:display/attribute/healing_curse/bar/add
+
+# カウントを0に設定
+    scoreboard players set #Count Temp 0
